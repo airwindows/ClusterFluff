@@ -21,17 +21,16 @@ func _process(delta):
 		momentum_turn += 10
 	if (Input.is_action_pressed("ui_right")):
 		momentum_turn -= 10
-	momentum_forward *= 0.9
-	momentum_turn *= 0.9
+	momentum_forward *= 0.95
+	momentum_turn *= 0.7
 	
 	var directed_velocity = linear_velocity.rotated(-rotation)
-	
+	var turn_factor = directed_velocity.y * -0.02
 	directed_velocity.y = 0
 	directed_velocity.x *= -delta
 	
 	self.apply_impulse(Vector2 (0,0), directed_velocity.rotated(rotation))
-	
 	self.apply_impulse(Vector2 (0,0), Vector2(0.0, momentum_forward*delta).rotated(rotation))
-	self.apply_impulse(Vector2 (0,10), Vector2 (momentum_turn*delta,0.0))
-	self.apply_impulse(Vector2 (0,-10), Vector2 (-momentum_turn*delta,0.0))
+	self.apply_impulse(Vector2 (0,10), Vector2 (momentum_turn*delta*turn_factor,0.0))
+	self.apply_impulse(Vector2 (0,-10), Vector2 (-momentum_turn*delta*turn_factor*0.5,0.0))
 

@@ -4,7 +4,7 @@
 [ext_resource path="res://Rock.tscn" type="PackedScene" id=2]
 [ext_resource path="res://icon.png" type="Texture" id=3]
 
-[node name="root" type="Node2D"]
+[node name="root" type="Node2D" index="0"]
 
 position = Vector2( 2, 2 )
 _sections_unfolded = [ "Transform" ]
