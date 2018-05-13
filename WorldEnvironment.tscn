@@ -1,0 +1,7 @@
+[gd_scene format=2]
+
+[node name="WorldEnvironment" type="WorldEnvironment" index="0"]
+
+environment = null
+
+
