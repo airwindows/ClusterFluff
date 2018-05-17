@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Tanker.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Tanker.png" type="Texture" id=2]
 
 [node name="Tanker" type="RigidBody2D" index="0"]
 
@@ -24,12 +24,13 @@ linear_damp = -1.0
 angular_velocity = 0.0
 angular_damp = -1.0
 script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
 momentum_forward = 0
 momentum_turn = 0
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
-scale = Vector2( 0.3, 1 )
+scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
@@ -38,7 +39,7 @@ _sections_unfolded = [ "Transform" ]
 position = Vector2( -0.674976, -0.181992 )
 scale = Vector2( 1.0675, 1.0182 )
 build_mode = 0
-polygon = PoolVector2Array( -16, -60, 16.5308, -60.8232, 16, 60, -16, 60 )
+polygon = PoolVector2Array( -14, -42, -8, -50, 8, -50, 14, -42, 14, 52, -14, 52 )
 
 [node name="Camera2D" type="Camera2D" parent="." index="2"]
 
