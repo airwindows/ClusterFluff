@@ -3,19 +3,19 @@
 [ext_resource path="res://Rock.tscn" type="PackedScene" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
 
-[node name="root" type="Node2D"]
+[node name="root" type="Node2D" index="0"]
 
 position = Vector2( 2, 2 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Rock" parent="." index="0" instance=ExtResource( 1 )]
 
-position = Vector2( 428, -142 )
+position = Vector2( 598, -212 )
 scale = Vector2( 13.5073, 14.3294 )
 
 [node name="Rock2" parent="." index="1" instance=ExtResource( 1 )]
 
-position = Vector2( -392, -332 )
+position = Vector2( -642, -222 )
 scale = Vector2( 13.5073, 14.3294 )
 
 [node name="Sprite" type="Sprite" parent="." index="2"]

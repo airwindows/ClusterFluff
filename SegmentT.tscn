@@ -10,12 +10,12 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Rock" parent="." index="0" instance=ExtResource( 1 )]
 
-position = Vector2( 338, -232 )
+position = Vector2( 138, -192 )
 scale = Vector2( 13.5073, 14.3294 )
 
 [node name="Rock2" parent="." index="1" instance=ExtResource( 1 )]
 
-position = Vector2( -372, -232 )
+position = Vector2( -252, -192 )
 scale = Vector2( 13.5073, 14.3294 )
 
 [node name="Sprite" type="Sprite" parent="." index="2"]
