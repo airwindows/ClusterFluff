@@ -11,7 +11,7 @@ config_version=3
 [application]
 
 config/name="Tankers"
-run/main_scene="res://root.tscn"
+run/main_scene="res://GameMap.tscn"
 config/icon="res://icon.png"
 
 [rendering]
