@@ -3,7 +3,8 @@ extends RigidBody2D
 # class member variables go here, for example:
 export var momentum_forward = 0
 export var momentum_turn = 0
-# var b = "textvar"
+export(NodePath) var tanker_camera
+export var control_key = KEY_A
 
 func _ready():
 	# Called every time the node is added to the scene.
@@ -13,16 +14,20 @@ func _ready():
 func _process(delta):
 #	# Called every frame. Delta is time since last frame.
 #	# Update game logic here.
-	if (Input.is_action_pressed("ui_up")):
-		momentum_forward -= 10
-	if (Input.is_action_pressed("ui_down")):
-		momentum_forward += 10
-	if (Input.is_action_pressed("ui_left")):
-		momentum_turn += 10
-	if (Input.is_action_pressed("ui_right")):
-		momentum_turn -= 10
+	if get_node("Camera2D").current == true:
+		if (Input.is_action_pressed("ui_up")):
+			momentum_forward -= 10
+		if (Input.is_action_pressed("ui_down")):
+			momentum_forward += 10
+		if (Input.is_action_pressed("ui_left")):
+			momentum_turn += 10
+		if (Input.is_action_pressed("ui_right")):
+			momentum_turn -= 10
 	momentum_forward *= 0.95
 	momentum_turn *= 0.7
+	
+	if (Input.is_key_pressed(control_key)):
+		get_node("Camera2D").current = true
 	
 	var directed_velocity = linear_velocity.rotated(-rotation)
 	var turn_factor = directed_velocity.y * -0.02
