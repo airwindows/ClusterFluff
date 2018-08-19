@@ -1,9 +1,10 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Tanker.gd" type="Script" id=1]
 [ext_resource path="res://Tanker.png" type="Texture" id=2]
+[ext_resource path="res://LiberationSansBold.tres" type="DynamicFont" id=3]
 
-[node name="Tanker" type="RigidBody2D" index="0"]
+[node name="Tanker" type="RigidBody2D"]
 
 input_pickable = false
 collision_layer = 1
@@ -48,7 +49,7 @@ polygon = PoolVector2Array( -14, -42, -8, -50, 8, -50, 14, -42, 14, 52, -14, 52 
 anchor_mode = 1
 rotating = true
 current = false
-zoom = Vector2( 4, 4 )
+zoom = Vector2( 1, 1 )
 limit_left = -10000000
 limit_top = -10000000
 limit_right = 10000000
@@ -86,10 +87,13 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 size_flags_stretch_ratio = 1.47
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "A"
 align = 1
 percent_visible = 1.0
 lines_skipped = 0
-max_lines_visible = -1
+max_lines_visible = 1
+_sections_unfolded = [ "custom_fonts" ]
 
 
