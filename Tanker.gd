@@ -23,8 +23,12 @@ func _process(delta):
 			momentum_turn += 10
 		if (Input.is_action_pressed("ui_right")):
 			momentum_turn -= 10
-	momentum_forward *= 0.95
-	momentum_turn *= 0.7
+	momentum_forward *= 0.9
+	momentum_turn += (angular_velocity*2.0)
+	momentum_turn *= 0.8
+	
+	if (abs(angular_velocity) > 0.2):
+		angular_velocity *= 0.99
 	
 	if (Input.is_key_pressed(control_key)):
 		get_node("Camera2D").current = true
@@ -32,7 +36,7 @@ func _process(delta):
 	directed_velocity.y = 0
 	directed_velocity.x *= -delta
 	
-	self.apply_impulse(Vector2 (0,0), directed_velocity.rotated(rotation))
+	self.apply_impulse(Vector2 (0,0), (directed_velocity.rotated(rotation)*2))
 	self.apply_impulse(Vector2 (0,0), Vector2(0.0, momentum_forward*delta).rotated(rotation))
 	self.apply_impulse(Vector2 (0,10), Vector2 (momentum_turn*delta,0.0))
 	self.apply_impulse(Vector2 (0,-10), Vector2 (-momentum_turn*delta,0.0))

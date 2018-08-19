@@ -7,7 +7,10 @@ path="res://.import/Rock.png-e4ee0eb1dad1e1e30df69062ccfa5349.stex"
 [deps]
 
 source_file="res://Rock.png"
+source_md5="af96ec24f0a5254c7372c5015719e734"
+
 dest_files=[ "res://.import/Rock.png-e4ee0eb1dad1e1e30df69062ccfa5349.stex" ]
+dest_md5="66246d19f7c66b8e0a8abc08fa69d8db"
 
 [params]
 
