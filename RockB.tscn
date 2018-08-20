@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://B.svg" type="Texture" id=1]
+
+[node name="StaticBody2D" type="StaticBody2D" index="0"]
+
+scale = Vector2( 0.5, 0.5 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -153.048, -144.779, -50.5739, -86.9545, 36.8948, -67.9236, 234.523, -102.326, 263.069, -86.5885, 270.023, -32.7897, 237.817, 37.4781, 168.445, 93.1259, 56.444, 122.677, -28.5603, 152.957, -92.4047, 129.608, -163.546, 24.9036, -184.341, -63.0193 )
+
+[node name="B" type="Sprite" parent="." index="1"]
+
+position = Vector2( -2.7793, 0.257139 )
+texture = ExtResource( 1 )
+
+

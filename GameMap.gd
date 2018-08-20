@@ -57,7 +57,7 @@ func _ready():
 	tile.append(segments[27]) # FinishLine
 	#print (27)
 	
-	for i in range (0,353):
+	for i in range (0,350):
 		var t = tile[i].instance()
 		add_child(t)
 		t.global_position = Vector2(0, i*-1000)

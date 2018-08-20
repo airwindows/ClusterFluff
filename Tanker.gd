@@ -23,17 +23,17 @@ func _process(delta):
 			momentum_turn += 10
 		if (Input.is_action_pressed("ui_right")):
 			momentum_turn -= 10
-	momentum_forward *= 0.85
+	momentum_forward *= 0.9
 	momentum_turn += (angular_velocity*2.0)
-	momentum_turn *= 0.8
+	momentum_turn *= 0.9
 	
 	momentum_turn += (self.rotation * abs(angular_velocity) * 0.5)
 	#steer towards straight up if twirling off line
-	momentum_turn += (self.rotation * abs(linear_velocity.length() * 0.008))
+	momentum_turn += (self.rotation * abs(linear_velocity.length() * 0.005))
 	#steer towards straight up if going really fast
 	#will be arranging segments so that there's generally room to go up
 	
-	if (abs(angular_velocity) > 0.25):
+	if (abs(angular_velocity) > 1.0):
 		angular_velocity *= 0.8
 	
 	if (Input.is_key_pressed(control_key)):

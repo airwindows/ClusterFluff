@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Wall7.svg" type="Texture" id=1]
+
+[node name="StaticBody2D" type="StaticBody2D" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -295.073, 69.2132, -254.897, 35.6331, -215.321, 19.4427, -189.536, -9.34015, -186.538, -141.262, -202.728, -294.771, -226.714, -486.057, -218.319, -514.84, -179.342, -519.037, -79.801, -517.838, 30.5334, -536.427, 77.3057, -516.039, 203.231, -400.908, 333.953, -308.562, 357.939, -256.993, 374.129, -213.819, 357.339, -146.059, 293.177, -20.7334, 257.798, 71.0121, 247.005, 168.754, 279.985, 270.694, 299.773, 318.665, 299.773, 363.039, 276.387, 412.809, 236.211, 444.59, 200.233, 476.371, 183.443, 497.359, 133.073, 520.745, 73.7078, 541.733, 2.35016, 538.135, -87.5964, 500.357, -196.132, 433.197, -284.879, 395.419, -367.63, 333.057, -377.824, 286.284, -366.431, 161.558, -337.048, 106.991 )
+
+[node name="Wall7" type="Sprite" parent="." index="1"]
+
+position = Vector2( -2.74728, 0.13591 )
+texture = ExtResource( 1 )
+
+
