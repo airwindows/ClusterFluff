@@ -2,15 +2,16 @@
 
 [ext_resource path="res://Wall9.svg" type="Texture" id=1]
 
-[node name="StaticBody2D" type="StaticBody2D" index="0"]
+[node name="StaticBody2D" type="StaticBody2D"]
 
 input_pickable = false
-collision_layer = 1
-collision_mask = 1
+collision_layer = 2
+collision_mask = 2
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="0"]
 

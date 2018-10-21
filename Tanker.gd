@@ -1,7 +1,7 @@
 extends RigidBody2D
 
 # class member variables go here, for example:
-export var speed = 100
+export var speed = 500
 export(NodePath) var tanker_camera
 export var control_key = KEY_A
 
@@ -22,11 +22,26 @@ func _process(delta):
 			self.apply_impulse(Vector2 (0,0), Vector2(-speed*delta, 0.0*delta))
 		if (Input.is_action_pressed("ui_right")):
 			self.apply_impulse(Vector2 (0,0), Vector2(speed*delta, 0.0*delta))
+		if (Input.is_key_pressed(KEY_SPACE)):
+			self.apply_impulse(Vector2 (0,0), Vector2(-linear_velocity*10*delta))
 	
 	
-	if (abs(angular_velocity) > 1.0):
-		angular_velocity *= 0.8
+	if (abs(angular_velocity) > 10000.0):
+		angular_velocity *= 0.9
+	
+	if (linear_velocity.length() > 100.0):
+		self.apply_impulse(Vector2 (0,0), Vector2(-linear_velocity*delta))
 	
 	if (Input.is_key_pressed(control_key)):
 		$"..".controlled = control_key
+
+
+
+func _on_Tanker_body_entered(body):
+	#if (collision_mask is the same as the end stage
+	
+	#self.remove_child($"Label")
+	#set this so if you touch the end stage, that player is deleted
+	#rather than just deleting the label
+	
 	

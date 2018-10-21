@@ -4,8 +4,9 @@
 [ext_resource path="res://Tanker.png" type="Texture" id=2]
 [ext_resource path="res://LiberationSansBold.tres" type="DynamicFont" id=3]
 
-[node name="Tanker" type="RigidBody2D"]
+[node name="Tanker" type="RigidBody2D" index="0"]
 
+position = Vector2( 0, 300 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -16,8 +17,8 @@ bounce = 0.01
 gravity_scale = 0.0
 custom_integrator = false
 continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
+contacts_reported = 1
+contact_monitor = true
 sleeping = false
 can_sleep = true
 linear_velocity = Vector2( 0, 0 )
@@ -25,8 +26,8 @@ linear_damp = 0.0
 angular_velocity = 0.0
 angular_damp = 0.0
 script = ExtResource( 1 )
-_sections_unfolded = [ "Angular", "Applied Forces", "Collision", "Linear", "Transform" ]
-speed = 100
+_sections_unfolded = [ "Angular", "Applied Forces", "Linear", "Transform" ]
+speed = 500
 tanker_camera = NodePath("Camera2D")
 control_key = 65
 
@@ -68,5 +69,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = 1
 _sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[connection signal="body_entered" from="." to="." method="_on_Tanker_body_entered"]
 
 

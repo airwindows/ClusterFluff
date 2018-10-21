@@ -1,10 +1,15 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://GameMap.gd" type="Script" id=1]
 [ext_resource path="res://bk-seamless_water_tile-16LG.jpg" type="Texture" id=2]
+[ext_resource path="res://Wall0.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Wall1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Wall3.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Wall9.tscn" type="PackedScene" id=6]
 
-[node name="Node2D" type="Node2D" index="0"]
+[node name="Node2D" type="Node2D"]
 
+position = Vector2( 0, -1 )
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 controlled = 65
@@ -20,8 +25,8 @@ limit_top = -10000000
 limit_right = 10000000
 limit_bottom = 10000000
 limit_smoothed = false
-drag_margin_h_enabled = true
-drag_margin_v_enabled = true
+drag_margin_h_enabled = false
+drag_margin_v_enabled = false
 smoothing_enabled = false
 smoothing_speed = 5.0
 offset_v = 0.0
@@ -40,5 +45,39 @@ texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 1920, 1080 )
 _sections_unfolded = [ "Region", "Transform" ]
+
+[node name="StaticBody2D" parent="." index="2" instance=ExtResource( 3 )]
+
+position = Vector2( -8.5, -12.5 )
+rotation = -1.5226
+scale = Vector2( 0.346969, 1.03136 )
+
+[node name="StaticBody2D2" parent="." index="3" instance=ExtResource( 4 )]
+
+position = Vector2( -42.4952, 566.157 )
+rotation = -1.5905
+scale = Vector2( 0.346969, 2.08686 )
+
+[node name="StaticBody2D3" parent="." index="4" instance=ExtResource( 4 )]
+
+position = Vector2( -13.4952, -566.843 )
+rotation = -1.5905
+scale = Vector2( 0.346969, 2.08686 )
+
+[node name="StaticBody2D4" parent="." index="5" instance=ExtResource( 5 )]
+
+position = Vector2( 970, -16 )
+scale = Vector2( 0.40625, 1.09375 )
+
+[node name="StaticBody2D5" parent="." index="6" instance=ExtResource( 5 )]
+
+position = Vector2( -964, -7 )
+scale = Vector2( 0.40625, 1.09375 )
+
+[node name="StaticBody2D6" parent="." index="7" instance=ExtResource( 6 )]
+
+position = Vector2( 434.477, 278.249 )
+rotation = -0.00117731
+scale = Vector2( 0.329757, 0.348907 )
 
 

@@ -24,9 +24,9 @@ func _ready():
 	"res://SegmentH.tscn"]
 	
 	
-	var t = load(segments[0]).instance()
-	add_child(t)
-	t.global_position = Vector2(0, 0*-1000)
+	#var t = load(segments[0]).instance()
+	#add_child(t)
+	#t.global_position = Vector2(0,0)
 	
 	
 	add_child(tankerA)
