@@ -7,10 +7,7 @@ path="res://.import/bk-seamless_water_tile-16LG.jpg-0bf1e8a54784a4e444b9edc384c6
 [deps]
 
 source_file="res://bk-seamless_water_tile-16LG.jpg"
-source_md5="57b6d447abb1efb3e35af243c67df927"
-
 dest_files=[ "res://.import/bk-seamless_water_tile-16LG.jpg-0bf1e8a54784a4e444b9edc384c6e3b0.stex" ]
-dest_md5="11e1077d95590ac258e49acfc8b610d0"
 
 [params]
 

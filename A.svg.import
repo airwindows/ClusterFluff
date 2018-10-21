@@ -7,10 +7,7 @@ path="res://.import/A.svg-c2d167625ed5693474e4c513539c3e0e.stex"
 [deps]
 
 source_file="res://A.svg"
-source_md5="a0f565096293619de9f9002cdcbbb351"
-
 dest_files=[ "res://.import/A.svg-c2d167625ed5693474e4c513539c3e0e.stex" ]
-dest_md5="182b4abf3f984d4cf68b3fb15a793da0"
 
 [params]
 

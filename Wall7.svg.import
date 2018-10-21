@@ -7,10 +7,7 @@ path="res://.import/Wall7.svg-1b5b3f324bd913cbe88c29024352ee06.stex"
 [deps]
 
 source_file="res://Wall7.svg"
-source_md5="6f2fb23344832c1f6cd8a842274e4224"
-
 dest_files=[ "res://.import/Wall7.svg-1b5b3f324bd913cbe88c29024352ee06.stex" ]
-dest_md5="de53e459380b2b3ff74bd2d00d2c5a97"
 
 [params]
 
