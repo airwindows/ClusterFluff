@@ -1,6 +1,8 @@
 extends Node2D
 onready var tankerTemplate = preload("res://Tanker.tscn")
 
+export var controlled = KEY_A
+
 func _ready():
 	var tankerA = tankerTemplate.instance()
 	var tankerB = tankerTemplate.instance()
@@ -42,7 +44,6 @@ func _ready():
 	tankerF.control_key = KEY_F
 	tankerG.control_key = KEY_G
 	
-	tankerA.get_node(tankerA.tanker_camera).current = true
 	tankerB.get_node("Label").text = "B"
 	tankerC.get_node("Label").text = "C"
 	tankerD.get_node("Label").text = "D"

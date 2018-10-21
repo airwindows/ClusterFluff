@@ -14,7 +14,7 @@ func _ready():
 func _process(delta):
 	var directed_velocity = linear_velocity.rotated(-rotation)
 	
-	if get_node("Camera2D").current == true:
+	if control_key == get_node("..").controlled:
 		if (Input.is_action_pressed("ui_up")):
 			momentum_forward -= 10
 		if (Input.is_action_pressed("ui_down")):
@@ -37,7 +37,7 @@ func _process(delta):
 		angular_velocity *= 0.8
 	
 	if (Input.is_key_pressed(control_key)):
-		get_node("Camera2D").current = true
+		$"..".controlled = control_key
 	
 	directed_velocity.y = 0
 	directed_velocity.x *= -delta
