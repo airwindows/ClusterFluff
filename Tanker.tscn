@@ -4,7 +4,7 @@
 [ext_resource path="res://Tanker.png" type="Texture" id=2]
 [ext_resource path="res://LiberationSansBold.tres" type="DynamicFont" id=3]
 
-[node name="Tanker" type="RigidBody2D" index="0"]
+[node name="Tanker" type="RigidBody2D"]
 
 input_pickable = false
 collision_layer = 1
@@ -33,16 +33,16 @@ control_key = 65
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
-scale = Vector2( 0.3, 0.3 )
+scale = Vector2( 0.3, 0.08 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
 
 position = Vector2( -0.674976, -0.181992 )
-scale = Vector2( 1.0675, 1.0182 )
 build_mode = 0
-polygon = PoolVector2Array( -14, -42, -8, -50, 8, -50, 14, -42, 14, 52, -14, 52 )
+polygon = PoolVector2Array( -13.7561, 0.530045, -5.17909, -14.5378, 7.10698, -14.306, 15.9159, 1.92091, 8.72969, 14.6706, -6.10634, 14.9025 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="Camera2D" type="Camera2D" parent="." index="2"]
 
@@ -77,9 +77,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = -15.0
-margin_top = -12.0
+margin_top = -24.0
 margin_right = 15.0
-margin_bottom = 18.0
+margin_bottom = 23.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -94,6 +94,6 @@ align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = 1
-_sections_unfolded = [ "custom_fonts" ]
+_sections_unfolded = [ "Rect", "custom_fonts" ]
 
 
