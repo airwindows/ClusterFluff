@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://GameMap.gd" type="Script" id=1]
+[ext_resource path="res://bk-seamless_water_tile-16LG.jpg" type="Texture" id=2]
 
 [node name="Node2D" type="Node2D" index="0"]
 
@@ -32,5 +33,12 @@ drag_margin_bottom = 0.2
 editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
+
+[node name="bk-seamless_water_tile-16LG" type="Sprite" parent="." index="1"]
+
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 1920, 1080 )
+_sections_unfolded = [ "Region", "Transform" ]
 
 
