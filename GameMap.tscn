@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://GameMap.gd" type="Script" id=1]
 [ext_resource path="res://bk-seamless_water_tile-16LG.jpg" type="Texture" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://Wall1.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Wall3.tscn" type="PackedScene" id=5]
 [ext_resource path="res://icon.png" type="Texture" id=6]
+[ext_resource path="res://LiberationSansBold.tres" type="DynamicFont" id=7]
+[ext_resource path="res://Timer.gd" type="Script" id=8]
 
 [node name="Node2D" type="Node2D" index="0"]
 
@@ -105,5 +107,31 @@ position = Vector2( 100.211, -242.731 )
 scale = Vector2( 1.29932, 1.1316 )
 build_mode = 0
 polygon = PoolVector2Array( -19.2968, -12.1902, 13.2503, -9.67188, 13.1092, 93.5677, -16.1251, 97.6561, -19.1028, 88.1746 )
+
+[node name="Timer" type="Label" parent="." index="9"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 67.0
+margin_top = -279.0
+margin_right = 222.0
+margin_bottom = -226.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 7 )
+text = "0"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+script = ExtResource( 8 )
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+ticking = true
+countdown = 0
 
 

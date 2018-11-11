@@ -45,7 +45,9 @@ func _on_Tanker_body_entered(body):
 			if i.is_in_group("Tanker"):
 				tankers += 1
 		if (tankers == 1):
+			$"../Timer".ticking = false
 			print("YOU WIN YAAAAY")
+			
 		self.queue_free()
 		#self.remove_child($"Label")
 	#set this so if you touch the end stage, that player is deleted
