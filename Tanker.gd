@@ -38,9 +38,9 @@ func _process(delta):
 
 
 func _on_Tanker_body_entered(body):
-	#if (collision_mask is the same as the end stage
-	
-	#self.remove_child($"Label")
+	if (body.name == "Goal"):
+		self.queue_free()
+		#self.remove_child($"Label")
 	#set this so if you touch the end stage, that player is deleted
 	#rather than just deleting the label
 	
