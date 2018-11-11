@@ -1,7 +1,7 @@
 extends RigidBody2D
 
 # class member variables go here, for example:
-export var speed = 500
+var speed = 0.01
 export(NodePath) var tanker_camera
 export var control_key = KEY_A
 
@@ -26,11 +26,11 @@ func _process(delta):
 			self.apply_impulse(Vector2 (0,0), Vector2(-linear_velocity*10*delta))
 	
 	
-	if (abs(angular_velocity) > 10000.0):
+	if (abs(angular_velocity) > 100.0):
 		angular_velocity *= 0.9
 	
-	if (linear_velocity.length() > 100.0):
-		self.apply_impulse(Vector2 (0,0), Vector2(-linear_velocity*delta))
+	if (linear_velocity.length() > 20.0):
+		self.apply_impulse(Vector2 (0,0), Vector2(-linear_velocity*20*delta))
 	
 	if (Input.is_key_pressed(control_key)):
 		$"..".controlled = control_key
