@@ -39,6 +39,13 @@ func _process(delta):
 
 func _on_Tanker_body_entered(body):
 	if (body.name == "Goal"):
+		var children = get_parent().get_children()
+		var tankers = 0
+		for i in children:
+			if i.is_in_group("Tanker"):
+				tankers += 1
+		if (tankers == 1):
+			print("YOU WIN YAAAAY")
 		self.queue_free()
 		#self.remove_child($"Label")
 	#set this so if you touch the end stage, that player is deleted

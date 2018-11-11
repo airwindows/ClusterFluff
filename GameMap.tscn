@@ -7,9 +7,8 @@
 [ext_resource path="res://Wall3.tscn" type="PackedScene" id=5]
 [ext_resource path="res://icon.png" type="Texture" id=6]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" index="0"]
 
-position = Vector2( 0, -1 )
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 controlled = 65

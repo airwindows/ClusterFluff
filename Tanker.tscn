@@ -4,7 +4,9 @@
 [ext_resource path="res://Tanker.png" type="Texture" id=2]
 [ext_resource path="res://LiberationSansBold.tres" type="DynamicFont" id=3]
 
-[node name="Tanker" type="RigidBody2D" index="0"]
+[node name="Tanker" type="RigidBody2D" index="0" groups=[
+"Tanker",
+]]
 
 position = Vector2( 0, 300 )
 input_pickable = false
