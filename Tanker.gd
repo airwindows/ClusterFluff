@@ -20,7 +20,14 @@ func _process(delta):
 			lvelocity.x = -20
 		if (Input.is_action_pressed("ui_right")):
 			lvelocity.x = 20
-	self.apply_impulse(Vector2 (0,0), lvelocity)
+	
+	if $"../Timer".countdown > 0:
+		self.apply_impulse(Vector2 (0,0), lvelocity)
+		self.apply_impulse(Vector2 (0,0), -(linear_velocity - (linear_velocity.normalized()*200)))
+	else:
+		self.apply_impulse(Vector2 (0,0), Vector2 (0,delta*300))
+		
+	self.angular_velocity *= (1.0-delta)
 	
 	if (self.position.y < -530):
 		var children = get_parent().get_children()
@@ -31,10 +38,8 @@ func _process(delta):
 		if (tankers == 1):
 			$"../Timer".ticking = false
 			print("YOU WIN YAAAAY")
-		$"../Timer".score += $"../Timer".increment
+		$"../Timer".score += int($"../Timer".countdown)
 		self.queue_free()
-	
-	self.apply_impulse(Vector2 (0,0), -(linear_velocity - (linear_velocity.normalized()*200)))
 	
 	if (Input.is_key_pressed(control_key)):
 		$"..".controlled = control_key

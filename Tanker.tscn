@@ -1,8 +1,13 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Tanker.gd" type="Script" id=1]
 [ext_resource path="res://Tanker.png" type="Texture" id=2]
 [ext_resource path="res://LiberationSansBold.tres" type="DynamicFont" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 10.0
 
 [node name="Tanker" type="RigidBody2D" groups=[
 "Tanker",
@@ -14,8 +19,8 @@ collision_layer = 1
 collision_mask = 1
 mode = 0
 mass = 1.0
-friction = 0.5
-bounce = 0.01
+friction = 0.0
+bounce = 0.7
 gravity_scale = 0.0
 custom_integrator = false
 continuous_cd = 0
@@ -38,14 +43,7 @@ scale = Vector2( 0.3, 0.08 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
-
-position = Vector2( -0.674976, -0.181992 )
-build_mode = 0
-polygon = PoolVector2Array( -13.7561, 0.530045, -5.17909, -14.5378, 7.10698, -14.306, 15.9159, 1.92091, 8.72969, 14.6706, -6.10634, 14.9025 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="Label" type="Label" parent="." index="2"]
+[node name="Label" type="Label" parent="." index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -70,6 +68,12 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = 1
 _sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
+
+position = Vector2( 0.0173911, -0.0961097 )
+scale = Vector2( 1.54678, 1.43296 )
+shape = SubResource( 1 )
 
 [connection signal="body_entered" from="." to="." method="_on_Tanker_body_entered"]
 

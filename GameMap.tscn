@@ -120,7 +120,6 @@ script = ExtResource( 7 )
 _sections_unfolded = [ "Rect", "custom_fonts" ]
 ticking = true
 countdown = 0
-increment = 0
 score = 0
 
 
