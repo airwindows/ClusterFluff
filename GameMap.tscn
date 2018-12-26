@@ -1,13 +1,12 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://GameMap.gd" type="Script" id=1]
 [ext_resource path="res://bk-seamless_water_tile-16LG.jpg" type="Texture" id=2]
 [ext_resource path="res://Wall0.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Wall1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://RockC.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Wall3.tscn" type="PackedScene" id=5]
-[ext_resource path="res://icon.png" type="Texture" id=6]
-[ext_resource path="res://LiberationSansBold.tres" type="DynamicFont" id=7]
-[ext_resource path="res://Timer.gd" type="Script" id=8]
+[ext_resource path="res://LiberationSansBold.tres" type="DynamicFont" id=6]
+[ext_resource path="res://Timer.gd" type="Script" id=7]
 
 [node name="Node2D" type="Node2D" index="0"]
 
@@ -42,6 +41,7 @@ editor_draw_drag_margin = false
 
 [node name="bk-seamless_water_tile-16LG" type="Sprite" parent="." index="1"]
 
+position = Vector2( -1.00317, 0 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 1920, 1080 )
@@ -49,66 +49,53 @@ _sections_unfolded = [ "Region", "Transform" ]
 
 [node name="StaticBody2D" parent="." index="2" instance=ExtResource( 3 )]
 
-position = Vector2( -247.902, 256.402 )
-rotation = -3.22164
+position = Vector2( -13.198, -371.48 )
+rotation = -1.59007
 scale = Vector2( 0.345431, 0.353289 )
 
-[node name="StaticBody2D6" parent="." index="3" instance=ExtResource( 3 )]
+[node name="StaticBody2D2" parent="." index="3" instance=ExtResource( 4 )]
 
-position = Vector2( 162.122, -196.711 )
-rotation = -0.310783
+position = Vector2( -300.478, -123.072 )
+rotation = -1.53998
 scale = Vector2( 0.357788, 0.509377 )
 
-[node name="StaticBody2D2" parent="." index="4" instance=ExtResource( 4 )]
+[node name="StaticBody2D6" parent="." index="4" instance=ExtResource( 3 )]
 
-position = Vector2( -42.4952, 566.157 )
-rotation = -1.5905
-scale = Vector2( 0.346969, 2.08686 )
+position = Vector2( 143.065, 103.188 )
+rotation = -1.53998
+scale = Vector2( 0.357788, 0.509377 )
 
-[node name="StaticBody2D3" parent="." index="5" instance=ExtResource( 4 )]
+[node name="StaticBody2D4" parent="." index="5" instance=ExtResource( 5 )]
 
-position = Vector2( -13.4952, -566.843 )
-rotation = -1.5905
-scale = Vector2( 0.346969, 2.08686 )
-
-[node name="StaticBody2D4" parent="." index="6" instance=ExtResource( 5 )]
-
-position = Vector2( 970, -16 )
+position = Vector2( 943.922, -5.96985 )
 scale = Vector2( 0.40625, 1.09375 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody2D7" parent="." index="6" instance=ExtResource( 5 )]
+
+position = Vector2( 243.457, 616.2 )
+rotation = -1.57783
+scale = Vector2( 0.40625, 2.453 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="StaticBody2D5" parent="." index="7" instance=ExtResource( 5 )]
 
-position = Vector2( -964, -7 )
+position = Vector2( -1032.2, -39.0962 )
 scale = Vector2( 0.40625, 1.09375 )
 
-[node name="Goal" type="StaticBody2D" parent="." index="8"]
+[node name="StaticBody2D8" parent="." index="8" instance=ExtResource( 5 )]
 
-editor/display_folded = true
-position = Vector2( 683.331, -385.841 )
-rotation = 0.0357261
-scale = Vector2( 1.73578, 0.509377 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
+position = Vector2( 543.52, -342.817 )
+rotation = -1.7859
+scale = Vector2( 0.40625, 0.504176 )
 
-[node name="Sprite" type="Sprite" parent="Goal" index="0"]
+[node name="StaticBody2D9" parent="." index="9" instance=ExtResource( 5 )]
 
-position = Vector2( 96.9211, -196.054 )
-scale = Vector2( 0.352866, 1 )
-texture = ExtResource( 6 )
+position = Vector2( -641.031, -258.564 )
+rotation = 0.885091
+scale = Vector2( 0.40625, 0.504176 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Goal" index="1"]
-
-position = Vector2( 100.211, -242.731 )
-scale = Vector2( 1.29932, 1.1316 )
-build_mode = 0
-polygon = PoolVector2Array( -19.2968, -12.1902, 13.2503, -9.67188, 13.1092, 93.5677, -16.1251, 97.6561, -19.1028, 88.1746 )
-
-[node name="Timer" type="Label" parent="." index="9"]
+[node name="Timer" type="Label" parent="." index="10"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -124,15 +111,16 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 7 )
+custom_fonts/font = ExtResource( 6 )
 text = "0"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-script = ExtResource( 8 )
+script = ExtResource( 7 )
 _sections_unfolded = [ "Rect", "custom_fonts" ]
 ticking = true
 countdown = 0
 increment = 0
+score = 0
 
 

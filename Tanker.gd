@@ -1,7 +1,6 @@
 extends RigidBody2D
 
 # class member variables go here, for example:
-var speed = 0.01
 export(NodePath) var tanker_camera
 export var control_key = KEY_A
 
@@ -11,34 +10,19 @@ func _ready():
 	pass
 
 func _process(delta):
-	var directed_velocity = linear_velocity.rotated(-rotation)
-	
+	var lvelocity = Vector2(0,0)
 	if control_key == $"..".controlled:
 		if (Input.is_action_pressed("ui_up")):
-			self.apply_impulse(Vector2 (0,0), Vector2(0.0*delta, -speed*delta))
+			lvelocity.y = -20
 		if (Input.is_action_pressed("ui_down")):
-			self.apply_impulse(Vector2 (0,0), Vector2(0.0*delta, speed*delta))
+			lvelocity.y = 20
 		if (Input.is_action_pressed("ui_left")):
-			self.apply_impulse(Vector2 (0,0), Vector2(-speed*delta, 0.0*delta))
+			lvelocity.x = -20
 		if (Input.is_action_pressed("ui_right")):
-			self.apply_impulse(Vector2 (0,0), Vector2(speed*delta, 0.0*delta))
-		if (Input.is_key_pressed(KEY_SPACE)):
-			self.apply_impulse(Vector2 (0,0), Vector2(-linear_velocity*10*delta))
+			lvelocity.x = 20
+	self.apply_impulse(Vector2 (0,0), lvelocity)
 	
-	
-	if (abs(angular_velocity) > 100.0):
-		angular_velocity *= 0.9
-	
-	if (linear_velocity.length() > 20.0):
-		self.apply_impulse(Vector2 (0,0), Vector2(-linear_velocity*20*delta))
-	
-	if (Input.is_key_pressed(control_key)):
-		$"..".controlled = control_key
-
-
-
-func _on_Tanker_body_entered(body):
-	if (body.name == "Goal"):
+	if (self.position.y < -530):
 		var children = get_parent().get_children()
 		var tankers = 0
 		for i in children:
@@ -47,10 +31,11 @@ func _on_Tanker_body_entered(body):
 		if (tankers == 1):
 			$"../Timer".ticking = false
 			print("YOU WIN YAAAAY")
-			
+		$"../Timer".score += $"../Timer".increment
 		self.queue_free()
-		#self.remove_child($"Label")
-	#set this so if you touch the end stage, that player is deleted
-	#rather than just deleting the label
 	
+	self.apply_impulse(Vector2 (0,0), -(linear_velocity - (linear_velocity.normalized()*200)))
 	
+	if (Input.is_key_pressed(control_key)):
+		$"..".controlled = control_key
+

@@ -4,7 +4,7 @@
 [ext_resource path="res://Tanker.png" type="Texture" id=2]
 [ext_resource path="res://LiberationSansBold.tres" type="DynamicFont" id=3]
 
-[node name="Tanker" type="RigidBody2D" index="0" groups=[
+[node name="Tanker" type="RigidBody2D" groups=[
 "Tanker",
 ]]
 
@@ -29,7 +29,6 @@ angular_velocity = 0.0
 angular_damp = 0.0
 script = ExtResource( 1 )
 _sections_unfolded = [ "Angular", "Applied Forces", "Linear", "Transform" ]
-speed = 500
 tanker_camera = NodePath("Camera2D")
 control_key = 65
 
