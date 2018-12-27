@@ -1,23 +1,20 @@
 extends Label
 
-# class member variables go here, for example:
 export var ticking = true
-export var countdown = 0
-export var score = 0
-# var a = 2
-# var b = "textvar"
+export var countdown = 0.0
+var framesbetweenupdates = 10
 
 func _ready():
-	# Called when the node is added to the scene for the first time.
-	# Initialization here
-	countdown = 11
+	countdown = 61
 
 func _process(delta):
-#	# Called every frame. Delta is time since last frame.
 	if (ticking):
 		countdown -= delta
+		framesbetweenupdates -= 1
 	
-	if countdown > 0:
-		self.text = str(int(countdown)) + " - " + str(int(score))
-	else:
-		self.text = "0 - " + str(int(score))
+	if framesbetweenupdates < 0:
+		framesbetweenupdates = 10
+		if countdown > 0:
+			self.text = "Time:" + str(int(countdown)) + "  Level:" +str(int($"../../../Globals".level+1)) + "  Score:" + str(int($"../../../Globals".score))
+		else:
+			self.text = "Time:0  Level: " + str(int($"../../../Globals".level+1)) + "  Score:" + str(int($"../../../Globals".score))

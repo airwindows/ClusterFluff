@@ -14,6 +14,10 @@ config/name="ClusterFluff"
 run/main_scene="res://GameMap.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Globals="*res://Globals.gd"
+
 [display]
 
 window/size/width=1920

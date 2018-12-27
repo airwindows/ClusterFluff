@@ -1,36 +1,24 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://bk-seamless_water_tile-16LG.jpg" type="Texture" id=1]
-[ext_resource path="res://Wall2.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Wall4.tscn" type="PackedScene" id=3]
-[ext_resource path="res://RockC.tscn" type="PackedScene" id=4]
+[ext_resource path="res://RockB.tscn" type="PackedScene" id=1]
+[ext_resource path="res://RockC.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Wall2.tscn" type="PackedScene" id=3]
 
 [node name="root" type="Node2D" index="0"]
 
 position = Vector2( 2, 2 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="bk-seamless_water_tile-16LG" type="Sprite" parent="." index="0"]
+[node name="StaticBody2D" parent="." index="0" instance=ExtResource( 1 )]
 
-position = Vector2( -4.03998, -2.15658 )
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 0, 0, 1000, 1000 )
-_sections_unfolded = [ "Region" ]
+position = Vector2( 612.332, 506.327 )
 
-[node name="StaticBody2D" parent="." index="1" instance=ExtResource( 2 )]
+[node name="StaticBody2D2" parent="." index="1" instance=ExtResource( 2 )]
 
-position = Vector2( -636.681, 82.7885 )
-rotation = -0.161139
+position = Vector2( 1519.97, 369.374 )
 
-[node name="StaticBody2D2" parent="." index="2" instance=ExtResource( 3 )]
+[node name="StaticBody2D3" parent="." index="2" instance=ExtResource( 3 )]
 
-position = Vector2( 664.502, 56.3879 )
-rotation = -3.1138
-
-[node name="StaticBody2D3" parent="." index="3" instance=ExtResource( 4 )]
-
-position = Vector2( -149.34, -54.3392 )
-rotation = -6.03049
+position = Vector2( 984.418, 425.361 )
 
 

@@ -1,6 +1,5 @@
 extends Node2D
 onready var tankerTemplate = preload("res://Tanker.tscn")
-
 export var controlled = KEY_A
 
 func _ready():
@@ -40,12 +39,33 @@ func _ready():
 	"res://SegmentE.tscn",
 	"res://SegmentF.tscn",
 	"res://SegmentG.tscn",
-	"res://SegmentH.tscn"]
+	"res://SegmentH.tscn",
+	"res://SegmentI.tscn",
+	"res://SegmentJ.tscn",
+	"res://SegmentK.tscn",
+	"res://SegmentL.tscn",
+	"res://SegmentM.tscn",
+	"res://SegmentN.tscn",
+	"res://SegmentO.tscn",
+	"res://SegmentP.tscn",
+	"res://SegmentQ.tscn",
+	"res://SegmentR.tscn",
+	"res://SegmentS.tscn",
+	"res://SegmentT.tscn",
+	"res://SegmentU.tscn",
+	"res://SegmentV.tscn",
+	"res://SegmentW.tscn",
+	"res://SegmentX.tscn",
+	"res://SegmentY.tscn",
+	"res://SegmentZ.tscn"]
 	
-	
-	#var t = load(segments[0]).instance()
-	#add_child(t)
-	#t.global_position = Vector2(0,0)
+	var t = load(segments[$"../Globals".level]).instance()
+	#GameMap is our root so we don't have to go down two levels to get to globals, which are
+	#Project/ProjectSettings/Autoloaded at the same level as this very script. Everywhere else we gotta
+	#go down two levels like this: $"../../Globals".score
+	add_child(t)
+	t.global_position = Vector2(-960,-540)
+	#this way we can build the levels while using the reference lines for positioning
 	
 	
 	add_child(tankerA)
@@ -74,32 +94,32 @@ func _ready():
 	add_child(tankerX)
 	add_child(tankerY)
 	add_child(tankerZ)
-	tankerA.global_position = Vector2(-800,500)
-	tankerB.global_position = Vector2(-766,500)
-	tankerC.global_position = Vector2(-733,500)
-	tankerD.global_position = Vector2(-700,500)
-	tankerE.global_position = Vector2(-666,500)
-	tankerF.global_position = Vector2(-633,500)
-	tankerG.global_position = Vector2(-600,500)
-	tankerH.global_position = Vector2(-566,500)
-	tankerI.global_position = Vector2(-533,500)
-	tankerJ.global_position = Vector2(-500,500)
-	tankerK.global_position = Vector2(-466,500)
-	tankerL.global_position = Vector2(-433,500)
-	tankerM.global_position = Vector2(-400,500)
-	tankerN.global_position = Vector2(-300,500)
-	tankerO.global_position = Vector2(-266,500)
-	tankerP.global_position = Vector2(-233,500)
-	tankerQ.global_position = Vector2(-200,500)
-	tankerR.global_position = Vector2(-166,500)
-	tankerS.global_position = Vector2(-133,500)
-	tankerT.global_position = Vector2(-100,500)
-	tankerU.global_position = Vector2(-66,500)
-	tankerV.global_position = Vector2(-33,500)
-	tankerW.global_position = Vector2(0,500)
-	tankerX.global_position = Vector2(33,500)
-	tankerY.global_position = Vector2(66,500)
-	tankerZ.global_position = Vector2(100,500)
+	tankerA.global_position = Vector2(-600,500)
+	tankerB.global_position = Vector2(-550,500)
+	tankerC.global_position = Vector2(-500,500)
+	tankerD.global_position = Vector2(-450,500)
+	tankerE.global_position = Vector2(-400,500)
+	tankerF.global_position = Vector2(-350,500)
+	tankerG.global_position = Vector2(-300,500)
+	tankerH.global_position = Vector2(-250,500)
+	tankerI.global_position = Vector2(-200,500)
+	tankerJ.global_position = Vector2(-150,500)
+	tankerK.global_position = Vector2(-100,500)
+	tankerL.global_position = Vector2(-50,500)
+	tankerM.global_position = Vector2(0,500)
+	tankerN.global_position = Vector2(50,500)
+	tankerO.global_position = Vector2(100,500)
+	tankerP.global_position = Vector2(150,500)
+	tankerQ.global_position = Vector2(200,500)
+	tankerR.global_position = Vector2(250,500)
+	tankerS.global_position = Vector2(300,500)
+	tankerT.global_position = Vector2(350,500)
+	tankerU.global_position = Vector2(400,500)
+	tankerV.global_position = Vector2(450,500)
+	tankerW.global_position = Vector2(500,500)
+	tankerX.global_position = Vector2(550,500)
+	tankerY.global_position = Vector2(600,500)
+	tankerZ.global_position = Vector2(650,500)
 	
 	tankerB.control_key = KEY_B
 	tankerC.control_key = KEY_C
@@ -152,5 +172,4 @@ func _ready():
 	tankerX.get_node("Label").text = "X"
 	tankerY.get_node("Label").text = "Y"
 	tankerZ.get_node("Label").text = "Z"
-	
 	

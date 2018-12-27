@@ -1,30 +1,9 @@
-[gd_scene load_steps=4 format=2]
-
-[ext_resource path="res://bk-seamless_water_tile-16LG.jpg" type="Texture" id=1]
-[ext_resource path="res://Wall4.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Wall1.tscn" type="PackedScene" id=3]
+[gd_scene format=2]
 
 [node name="root" type="Node2D" index="0"]
 
 position = Vector2( 2, 2 )
 rotation = 0.00241977
 _sections_unfolded = [ "Transform" ]
-
-[node name="bk-seamless_water_tile-16LG" type="Sprite" parent="." index="0"]
-
-position = Vector2( -4.03998, -2.15658 )
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 0, 0, 1000, 1000 )
-_sections_unfolded = [ "Region" ]
-
-[node name="StaticBody2D" parent="." index="1" instance=ExtResource( 2 )]
-
-position = Vector2( -671.666, 49.9033 )
-
-[node name="StaticBody2D2" parent="." index="2" instance=ExtResource( 3 )]
-
-position = Vector2( 532.761, 108.525 )
-rotation = -2.63445
 
 
