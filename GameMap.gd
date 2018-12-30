@@ -67,109 +67,157 @@ func _ready():
 	t.global_position = Vector2(-960,-540)
 	#this way we can build the levels while using the reference lines for positioning
 	
-	
 	add_child(tankerA)
-	add_child(tankerB)
-	add_child(tankerC)
-	add_child(tankerD)
-	add_child(tankerE)
-	add_child(tankerF)
-	add_child(tankerG)
-	add_child(tankerH)
-	add_child(tankerI)
-	add_child(tankerJ)
-	add_child(tankerK)
-	add_child(tankerL)
-	add_child(tankerM)
-	add_child(tankerN)
-	add_child(tankerO)
-	add_child(tankerP)
-	add_child(tankerQ)
-	add_child(tankerR)
-	add_child(tankerS)
-	add_child(tankerT)
-	add_child(tankerU)
-	add_child(tankerV)
-	add_child(tankerW)
-	add_child(tankerX)
-	add_child(tankerY)
-	add_child(tankerZ)
 	tankerA.global_position = Vector2(-600,500)
-	tankerB.global_position = Vector2(-550,500)
-	tankerC.global_position = Vector2(-500,500)
-	tankerD.global_position = Vector2(-450,500)
-	tankerE.global_position = Vector2(-400,500)
-	tankerF.global_position = Vector2(-350,500)
-	tankerG.global_position = Vector2(-300,500)
-	tankerH.global_position = Vector2(-250,500)
-	tankerI.global_position = Vector2(-200,500)
-	tankerJ.global_position = Vector2(-150,500)
-	tankerK.global_position = Vector2(-100,500)
-	tankerL.global_position = Vector2(-50,500)
-	tankerM.global_position = Vector2(0,500)
-	tankerN.global_position = Vector2(50,500)
-	tankerO.global_position = Vector2(100,500)
-	tankerP.global_position = Vector2(150,500)
-	tankerQ.global_position = Vector2(200,500)
-	tankerR.global_position = Vector2(250,500)
-	tankerS.global_position = Vector2(300,500)
-	tankerT.global_position = Vector2(350,500)
-	tankerU.global_position = Vector2(400,500)
-	tankerV.global_position = Vector2(450,500)
-	tankerW.global_position = Vector2(500,500)
-	tankerX.global_position = Vector2(550,500)
-	tankerY.global_position = Vector2(600,500)
-	tankerZ.global_position = Vector2(650,500)
 	
-	tankerB.control_key = KEY_B
-	tankerC.control_key = KEY_C
-	tankerD.control_key = KEY_D
-	tankerE.control_key = KEY_E
-	tankerF.control_key = KEY_F
-	tankerG.control_key = KEY_G
-	tankerH.control_key = KEY_H
-	tankerI.control_key = KEY_I
-	tankerJ.control_key = KEY_J
-	tankerK.control_key = KEY_K
-	tankerL.control_key = KEY_L
-	tankerM.control_key = KEY_M
-	tankerN.control_key = KEY_N
-	tankerO.control_key = KEY_O
-	tankerP.control_key = KEY_P
-	tankerQ.control_key = KEY_Q
-	tankerR.control_key = KEY_R
-	tankerS.control_key = KEY_S
-	tankerT.control_key = KEY_T
-	tankerU.control_key = KEY_U
-	tankerV.control_key = KEY_V
-	tankerW.control_key = KEY_W
-	tankerX.control_key = KEY_X
-	tankerY.control_key = KEY_Y
-	tankerZ.control_key = KEY_Z
+	if $"../Globals".level > 0:
+		add_child(tankerB)
+		tankerB.control_key = KEY_B
+		tankerB.get_node("Label").text = "B"
+		tankerB.global_position = Vector2(-550,500)
 	
-	tankerB.get_node("Label").text = "B"
-	tankerC.get_node("Label").text = "C"
-	tankerD.get_node("Label").text = "D"
-	tankerE.get_node("Label").text = "E"
-	tankerF.get_node("Label").text = "F"
-	tankerG.get_node("Label").text = "G"
-	tankerH.get_node("Label").text = "H"
-	tankerI.get_node("Label").text = "I"
-	tankerJ.get_node("Label").text = "J"
-	tankerK.get_node("Label").text = "K"
-	tankerL.get_node("Label").text = "L"
-	tankerM.get_node("Label").text = "M"
-	tankerN.get_node("Label").text = "N"
-	tankerO.get_node("Label").text = "O"
-	tankerP.get_node("Label").text = "P"
-	tankerQ.get_node("Label").text = "Q"
-	tankerR.get_node("Label").text = "R"
-	tankerS.get_node("Label").text = "S"
-	tankerT.get_node("Label").text = "T"
-	tankerU.get_node("Label").text = "U"
-	tankerV.get_node("Label").text = "V"
-	tankerW.get_node("Label").text = "W"
-	tankerX.get_node("Label").text = "X"
-	tankerY.get_node("Label").text = "Y"
-	tankerZ.get_node("Label").text = "Z"
+	if $"../Globals".level > 1:
+		add_child(tankerC)
+		tankerC.control_key = KEY_C
+		tankerC.get_node("Label").text = "C"
+		tankerC.global_position = Vector2(-500,500)
+	
+	if $"../Globals".level > 2:
+		add_child(tankerD)
+		tankerD.control_key = KEY_D
+		tankerD.get_node("Label").text = "D"
+		tankerD.global_position = Vector2(-450,500)
+	
+	if $"../Globals".level > 3:
+		add_child(tankerE)
+		tankerE.control_key = KEY_E
+		tankerE.get_node("Label").text = "E"
+		tankerE.global_position = Vector2(-400,500)
+	
+	if $"../Globals".level > 4:
+		add_child(tankerF)
+		tankerF.control_key = KEY_F
+		tankerF.get_node("Label").text = "F"
+		tankerF.global_position = Vector2(-350,500)
+	
+	if $"../Globals".level > 5:
+		add_child(tankerG)
+		tankerG.control_key = KEY_G
+		tankerG.get_node("Label").text = "G"
+		tankerG.global_position = Vector2(-300,500)
+	
+	if $"../Globals".level > 6:
+		add_child(tankerH)
+		tankerH.control_key = KEY_H
+		tankerH.get_node("Label").text = "H"
+		tankerH.global_position = Vector2(-250,500)
+	
+	if $"../Globals".level > 7:
+		add_child(tankerI)
+		tankerI.control_key = KEY_I
+		tankerI.get_node("Label").text = "I"
+		tankerI.global_position = Vector2(-200,500)
+	
+	if $"../Globals".level > 8:
+		add_child(tankerJ)
+		tankerJ.control_key = KEY_J
+		tankerJ.get_node("Label").text = "J"
+		tankerJ.global_position = Vector2(-150,500)
+	
+	if $"../Globals".level > 9:
+		add_child(tankerK)
+		tankerK.control_key = KEY_K
+		tankerK.get_node("Label").text = "K"
+		tankerK.global_position = Vector2(-100,500)
+	
+	if $"../Globals".level > 10:
+		add_child(tankerL)
+		tankerL.control_key = KEY_L
+		tankerL.get_node("Label").text = "L"
+		tankerL.global_position = Vector2(-50,500)
+	
+	if $"../Globals".level > 11:
+		add_child(tankerM)
+		tankerM.control_key = KEY_M
+		tankerM.get_node("Label").text = "M"
+		tankerM.global_position = Vector2(0,500)
+	
+	if $"../Globals".level > 12:
+		add_child(tankerN)
+		tankerN.control_key = KEY_N
+		tankerN.get_node("Label").text = "N"
+		tankerN.global_position = Vector2(50,500)
+	
+	if $"../Globals".level > 13:
+		add_child(tankerO)
+		tankerO.control_key = KEY_O
+		tankerO.get_node("Label").text = "O"
+		tankerO.global_position = Vector2(100,500)
+	
+	if $"../Globals".level > 14:
+		add_child(tankerP)
+		tankerP.control_key = KEY_P
+		tankerP.get_node("Label").text = "P"
+		tankerP.global_position = Vector2(150,500)
+	
+	if $"../Globals".level > 15:
+		add_child(tankerQ)
+		tankerQ.control_key = KEY_Q
+		tankerQ.get_node("Label").text = "Q"
+		tankerQ.global_position = Vector2(200,500)
+	
+	if $"../Globals".level > 16:
+		add_child(tankerR)
+		tankerR.control_key = KEY_R
+		tankerR.get_node("Label").text = "R"
+		tankerR.global_position = Vector2(250,500)
+	
+	if $"../Globals".level > 17:
+		add_child(tankerS)
+		tankerS.control_key = KEY_S
+		tankerS.get_node("Label").text = "S"
+		tankerS.global_position = Vector2(300,500)
+	
+	if $"../Globals".level > 18:
+		add_child(tankerT)
+		tankerT.control_key = KEY_T
+		tankerT.get_node("Label").text = "T"
+		tankerT.global_position = Vector2(350,500)
+	
+	if $"../Globals".level > 19:
+		add_child(tankerU)
+		tankerU.control_key = KEY_U
+		tankerU.get_node("Label").text = "U"
+		tankerU.global_position = Vector2(400,500)
+	
+	if $"../Globals".level > 20:
+		add_child(tankerV)
+		tankerV.control_key = KEY_V
+		tankerV.get_node("Label").text = "V"
+		tankerV.global_position = Vector2(450,500)
+	
+	if $"../Globals".level > 21:
+		add_child(tankerW)
+		tankerW.control_key = KEY_W
+		tankerW.get_node("Label").text = "W"
+		tankerW.global_position = Vector2(500,500)
+	
+	if $"../Globals".level > 22:
+		add_child(tankerX)
+		tankerX.control_key = KEY_X
+		tankerX.get_node("Label").text = "X"
+		tankerX.global_position = Vector2(550,500)
+	
+	if $"../Globals".level > 23:
+		add_child(tankerY)
+		tankerY.control_key = KEY_Y
+		tankerY.get_node("Label").text = "Y"
+		tankerY.global_position = Vector2(600,500)
+	
+	if $"../Globals".level > 24:
+		add_child(tankerZ)
+		tankerZ.control_key = KEY_Z
+		tankerZ.get_node("Label").text = "Z"
+		tankerZ.global_position = Vector2(650,500)
+	
 	
