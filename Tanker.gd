@@ -19,6 +19,8 @@ func _process(delta):
 			lvelocity.x = 20
 			self.angular_velocity *= (1.0-delta)
 	
+	$DotFlare.rotation_degrees = -$".".rotation_degrees
+	
 	if $"../TopLayer/Timer".countdown > 0:
 		self.apply_impulse(Vector2 (0,0), lvelocity)
 		self.apply_impulse(Vector2 (0,0), -(linear_velocity - (linear_velocity.normalized()*200)))

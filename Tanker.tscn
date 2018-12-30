@@ -1,15 +1,16 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Tanker.gd" type="Script" id=1]
-[ext_resource path="res://Tanker.png" type="Texture" id=2]
+[ext_resource path="res://Dot.svg" type="Texture" id=2]
 [ext_resource path="res://LiberationSansBold.tres" type="DynamicFont" id=3]
+[ext_resource path="res://DotFlare.svg" type="Texture" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
 
 custom_solver_bias = 0.0
 radius = 10.0
 
-[node name="Tanker" type="RigidBody2D" groups=[
+[node name="Tanker" type="RigidBody2D" index="0" groups=[
 "Tanker",
 ]]
 
@@ -39,7 +40,8 @@ control_key = 65
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
-scale = Vector2( 0.3, 0.08 )
+position = Vector2( -0.395109, 1.6045 )
+scale = Vector2( 1.80043, 1.81309 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
@@ -49,10 +51,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -15.0
-margin_top = -24.0
-margin_right = 15.0
-margin_bottom = 23.0
+margin_left = -22.0
+margin_top = -28.0
+margin_right = 23.0
+margin_bottom = 30.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -64,6 +66,7 @@ custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "A"
 align = 1
+valign = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = 1
@@ -71,9 +74,16 @@ _sections_unfolded = [ "Rect", "custom_fonts" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
 
-position = Vector2( 0.0173911, -0.0961097 )
-scale = Vector2( 1.54678, 1.43296 )
+position = Vector2( 0.0328919, 1.88246 )
+scale = Vector2( 2.44994, 2.49119 )
 shape = SubResource( 1 )
+
+[node name="DotFlare" type="Sprite" parent="." index="3"]
+
+position = Vector2( 0.410848, 3.02677 )
+scale = Vector2( 2.286, 2.14968 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
 
 [connection signal="body_entered" from="." to="." method="_on_Tanker_body_entered"]
 
