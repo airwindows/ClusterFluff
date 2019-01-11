@@ -1,17 +1,17 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://GameMap.gd" type="Script" id=1]
-[ext_resource path="res://bk-seamless_water_tile-16LG.jpg" type="Texture" id=2]
-[ext_resource path="res://LiberationSansBold.tres" type="DynamicFont" id=3]
-[ext_resource path="res://Timer.gd" type="Script" id=4]
+[ext_resource path="res://LiberationSansBold.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Timer.gd" type="Script" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 8.61934, 18.5812 )
+extents = Vector2( 8.61934, 19.0542 )
 
 [node name="Node2D" type="Node2D" index="0"]
 
+position = Vector2( 0, 1 )
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 controlled = 65
@@ -41,17 +41,8 @@ editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
 
-[node name="bk-seamless_water_tile-16LG" type="Sprite" parent="." index="1"]
+[node name="Borders" type="StaticBody2D" parent="." index="1"]
 
-position = Vector2( -1.00317, 0 )
-texture = ExtResource( 2 )
-region_enabled = true
-region_rect = Rect2( 0, 0, 1920, 1080 )
-_sections_unfolded = [ "Region", "Transform" ]
-
-[node name="Borders" type="StaticBody2D" parent="." index="2"]
-
-editor/display_folded = true
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -62,25 +53,24 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders" index="0"]
 
-position = Vector2( -1018.57, 14.0373 )
-scale = Vector2( 6.90535, 34.0908 )
+position = Vector2( -2608.46, -8.16275 )
+scale = Vector2( 191.407, 160.475 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Borders" index="1"]
 
-position = Vector2( 1019.3, 2.59081 )
-scale = Vector2( 6.90535, 34.3617 )
+position = Vector2( 2748.27, -3.17386 )
+scale = Vector2( 207.047, 160.978 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Borders" index="2"]
 
-position = Vector2( 3.17935, 587.05 )
-scale = Vector2( 125.358, 2.63661 )
+position = Vector2( 4.71109, 2148.24 )
+scale = Vector2( 519.662, 84.4215 )
 shape = SubResource( 1 )
 
-[node name="TopLayer" type="Node2D" parent="." index="3"]
+[node name="TopLayer" type="Node2D" parent="." index="2"]
 
-editor/display_folded = true
 z_index = 2
 _sections_unfolded = [ "Pause", "Z Index" ]
 
@@ -100,16 +90,17 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "0"
 align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-script = ExtResource( 4 )
+script = ExtResource( 3 )
 _sections_unfolded = [ "custom_colors", "custom_fonts" ]
-ticking = true
+completedlevel = false
 countdown = 0.0
+framesbetweenupdates = 0.01
 
 

@@ -1,9 +1,19 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Star.tscn" type="PackedScene" id=1]
 
 [node name="root" type="Node2D" index="0"]
 
 position = Vector2( 2, 2 )
 rotation = 0.00241977
 _sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody2D" parent="." index="0" instance=ExtResource( 1 )]
+
+position = Vector2( 556.766, 266.422 )
+
+[node name="StaticBody2D2" parent="." index="1" instance=ExtResource( 1 )]
+
+position = Vector2( 1180.03, 280.074 )
 
 
