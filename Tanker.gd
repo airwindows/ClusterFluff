@@ -8,19 +8,19 @@ func _physics_process(delta):
 	var beingcontrolled = false
 	if control_key == $"..".controlled:
 		if (Input.is_action_pressed("ui_up")):
-			lvelocity.y = $"../../Globals".factor * -0.125
+			lvelocity.y = $"../../Globals".factor * -0.12
 			self.angular_velocity *= (1.0-delta)
 			beingcontrolled = true
 		if (Input.is_action_pressed("ui_down")):
-			lvelocity.y = $"../../Globals".factor * 0.125
+			lvelocity.y = $"../../Globals".factor * 0.12
 			self.angular_velocity *= (1.0-delta)
 			beingcontrolled = true
 		if (Input.is_action_pressed("ui_left")):
-			lvelocity.x = $"../../Globals".factor * -0.125
+			lvelocity.x = $"../../Globals".factor * -0.12
 			self.angular_velocity *= (1.0-delta)
 			beingcontrolled = true
 		if (Input.is_action_pressed("ui_right")):
-			lvelocity.x = $"../../Globals".factor * 0.125
+			lvelocity.x = $"../../Globals".factor * 0.12
 			self.angular_velocity *= (1.0-delta)
 			beingcontrolled = true
 		$DotFlare.rotation_degrees = -$".".rotation_degrees
@@ -53,12 +53,7 @@ func _physics_process(delta):
 			$"../TopLayer/Timer".completedlevel = true #should be able to override running out of time and losing controls
 		
 		$"../../Globals".score += int($"../TopLayer/Timer".countdown)
-		$"../../Globals".bonus += int($"../TopLayer/Timer".countdown)
-		
-		if ($"../../Globals".bonus > 1000):
-			$"../../Globals".kabonus += 1
-			$"../../Globals".bonus -= 1000
-			
+		$"../../Globals".kabonus += $"../TopLayer/Timer".countdown * 0.001
 		self.queue_free()
 	
 	if (Input.is_key_pressed(control_key)):
