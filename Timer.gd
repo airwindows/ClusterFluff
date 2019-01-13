@@ -8,7 +8,8 @@ func _ready():
 	countdown = 61
 
 func _physics_process(delta):
-	countdown -= delta
+	if !(completedlevel && $"../../../Globals".pachinkomode):
+		countdown -= delta
 	framesbetweenupdates -= delta
 	
 	if (completedlevel):
@@ -39,6 +40,9 @@ func _physics_process(delta):
 
 			$"../../../Globals".factor = 200 + (sqrt($"../../../Globals".kabonus+1) * 100)
 			#we must update factor each time we change this, so the speed can return to normal on reset
+			if ($"../../../Globals".pachinkomode):
+				$"../../../Globals".factor = 2000
+			#this sets factor super-high for pachinko mode level testing
 		#this is our ringing up of bonus guys and points
 		#you can interrupt the bonus ring-up if you're running low on time, and it'll save them for the next level
 		else:

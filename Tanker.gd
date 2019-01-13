@@ -7,17 +7,20 @@ func _physics_process(delta):
 	var lvelocity = Vector2(0,0)
 	if control_key == $"..".controlled:
 		if (Input.is_action_pressed("ui_up")):
-			lvelocity.y = -20
+			lvelocity.y = $"../../Globals".factor * -0.1
 			self.angular_velocity *= (1.0-delta)
 		if (Input.is_action_pressed("ui_down")):
-			lvelocity.y = 20
+			lvelocity.y = $"../../Globals".factor * 0.1
 			self.angular_velocity *= (1.0-delta)
 		if (Input.is_action_pressed("ui_left")):
-			lvelocity.x = -20
+			lvelocity.x = $"../../Globals".factor * -0.1
 			self.angular_velocity *= (1.0-delta)
 		if (Input.is_action_pressed("ui_right")):
-			lvelocity.x = 20
+			lvelocity.x = $"../../Globals".factor * 0.1
 			self.angular_velocity *= (1.0-delta)
+	
+	if $"../../Globals".pachinkomode:
+		lvelocity.y = $"../../Globals".factor * -0.1
 	
 	if $"../TopLayer/Timer".countdown > 0:
 		self.apply_impulse(Vector2 (0,0), lvelocity)
@@ -26,7 +29,7 @@ func _physics_process(delta):
 		self.apply_impulse(Vector2 (0,0), Vector2 (0,delta*200))
 		self.angular_velocity *= (1.0-delta)
 	
-	$DotFlare.rotation_degrees = -$".".rotation_degrees - ($"../TopLayer/Timer".framesbetweenupdates*12)
+	$DotFlare.rotation_degrees = -$".".rotation_degrees - ($"../TopLayer/Timer".framesbetweenupdates*14)
 	
 	if (self.position.y < -530):
 		var children = get_parent().get_children()

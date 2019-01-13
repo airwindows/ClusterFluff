@@ -63,13 +63,17 @@ func _ready():
 	"res://SegmentZ.tscn"]
 	#got a few extra in case the math gives us higher numbers
 	
-	var t = load(segments[$"../Globals".level % 26]).instance()
+	var t = load(segments[$"../Globals".level % 4]).instance() #26
 	#GameMap is our root so we don't have to go down two levels to get to globals, which are
 	#Project/ProjectSettings/Autoloaded at the same level as this very script. Everywhere else we gotta
 	#go down two levels like this: $"../../Globals".score
 	add_child(t)
 	t.global_position = Vector2(-960,-540)
 	#this way we can build the levels while using the reference lines for positioning
+	
+	if $"../Globals".pachinkomode:
+		$"../Globals".players = 25
+		#pachinko mode testing means you always have every player
 	
 	add_child(tankerA)
 	tankerA.global_position = Vector2(-600,500)
