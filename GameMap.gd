@@ -32,7 +32,7 @@ func _ready():
 	
 	
 	var segments = [
-	"res://SegmentA.tscn",
+	"res://SegmentA.tscn", #replace with segment under test, set level % to 1
 	"res://SegmentB.tscn",
 	"res://SegmentC.tscn",
 	"res://SegmentD.tscn",
@@ -63,7 +63,7 @@ func _ready():
 	"res://SegmentZ.tscn"]
 	#got a few extra in case the math gives us higher numbers
 	
-	var t = load(segments[$"../Globals".level % 4]).instance() #26
+	var t = load(segments[$"../Globals".level % 10]).instance() #26
 	#GameMap is our root so we don't have to go down two levels to get to globals, which are
 	#Project/ProjectSettings/Autoloaded at the same level as this very script. Everywhere else we gotta
 	#go down two levels like this: $"../../Globals".score

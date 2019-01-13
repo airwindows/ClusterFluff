@@ -71,6 +71,51 @@ bounce = 0.0
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" index="0"]
 
 build_mode = 0
-polygon = PoolVector2Array(  )
+polygon = PoolVector2Array( 500.253, -37.73, 477.268, 22.1786, 423.473, 87.9557, 339.845, 169.382, 255.24, 231.003, 163.298, 288.711, 67.6893, 332.236, -54.084, 371.115, -44.303, -31.6168 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." index="3"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -7.69147, 605.082, 16.4329, 549.335, 68.5936, 493.262, 127.6, 452.838, 206.167, 417.629, 314.727, 394.809, 421.982, 405.893, 509.678, 437.842, 561.838, 475.006, 599.981, 526.189, 632.581, 604.43, 635.189, 668.327, 624.757, 736.788, 592.483, 796.446, 529.837, 857.004, 452.995, 881.201, 341.494, 898.204, 182.579, 883.49, 103.776, 842.944, 38.0516, 787.357, -36.5009, 677.49 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." index="4"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D3" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 1969.53, 108.094, 1884.33, 151.507, 1782.9, 201.006, 1634.8, 245.636, 1487.12, 263.894, 1287.5, 253.345, 1133.73, 217.235, 958.858, 135.684, 857.02, 60.2179, 731.244, -59.8781, 2044.18, -60.6895 )
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="." index="5"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D4" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 1974.46, 800.284, 1861.79, 847.877, 1755.21, 875.538, 1649.45, 874.317, 1521.72, 847.47, 1432.23, 808.826, 1384.23, 767.742, 1355.76, 690.861, 1342.33, 600.964, 1377.72, 513.1, 1440.37, 445.168, 1542.06, 390.66, 1712.91, 337.372, 1861.38, 319.474, 1909.79, 332.898, 1990.73, 394.321 )
 
 

@@ -21,7 +21,7 @@ func _physics_process(delta):
 	if framesbetweenupdates < 0:
 		framesbetweenupdates = 0.25
 		if countdown > 0:
-			self.text = "Time:" + str(int(countdown)) + " kabonuses " +str(int($"../../../Globals".kabonus)) + " bonuses " +str(int($"../../../Globals".bonus/100)) + " Score:" + str(int($"../../../Globals".score))
+			self.text = "Time:" + str(int(countdown)) + " warp " +str(int($"../../../Globals".kabonus)) + " bonuses " +str(int($"../../../Globals".bonus/100)) + " Score:" + str(int($"../../../Globals".score))
 				#this is added on top of the bonus dings and doesn't cut back bonuses 
 			
 			if $"../../../".has_node("TankerA"):
@@ -52,7 +52,7 @@ func _physics_process(delta):
 				get_tree().change_scene("res://GameMap.tscn")
 				#out of time and we completed the level: thrown into next level
 			else:
-				self.text = "Game Over kabonuses " +str(int($"../../../Globals".kabonus)) + " bonuses " +str(int($"../../../Globals".bonus/100)) + " Score:" + str(int($"../../../Globals".score))
+				self.text = "Game Over warp " +str(int($"../../../Globals".kabonus)) + " bonuses " +str(int($"../../../Globals".bonus/100)) + " Score:" + str(int($"../../../Globals".score))
 				#out of time and uncomplete: we will rack up the final score as we're still ticking away the clock
 				if ($"../../../Globals".kabonus > 0):
 					#boom!
