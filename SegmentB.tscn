@@ -3,7 +3,7 @@
 [ext_resource path="res://Level2.jpg" type="Texture" id=1]
 [ext_resource path="res://LShadow2.jpg" type="Texture" id=2]
 
-[node name="root" type="Node2D" index="0"]
+[node name="root" type="Node2D"]
 
 position = Vector2( 2, 2 )
 _sections_unfolded = [ "Transform" ]
@@ -62,6 +62,7 @@ shadow_item_cull_mask = 1
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." index="2"]
 
+visible = false
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -77,6 +78,7 @@ polygon = PoolVector2Array( 126.557, -16.6791, 659.265, 135.435, 367.354, 546.82
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." index="3"]
 
+visible = false
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -92,6 +94,7 @@ polygon = PoolVector2Array( 1876.2, 1099.12, 1486.58, 614.546, 1345.14, 389.941,
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="." index="4"]
 
+visible = false
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -107,6 +110,7 @@ polygon = PoolVector2Array( 916.454, 42.761, 930.619, 42.2265, 1015.87, 221.555,
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="." index="5"]
 
+visible = false
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -122,6 +126,7 @@ polygon = PoolVector2Array( 674.974, 307.156, 696.57, 310.115, 714.617, 477.857,
 
 [node name="StaticBody2D5" type="StaticBody2D" parent="." index="6"]
 
+visible = false
 input_pickable = false
 collision_layer = 1
 collision_mask = 1

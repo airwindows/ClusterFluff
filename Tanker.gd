@@ -5,19 +5,33 @@ export var control_key = KEY_A
 
 func _physics_process(delta):
 	var lvelocity = Vector2(0,0)
+	var beingcontrolled = false
 	if control_key == $"..".controlled:
 		if (Input.is_action_pressed("ui_up")):
-			lvelocity.y = $"../../Globals".factor * -0.1
+			lvelocity.y = $"../../Globals".factor * -0.125
 			self.angular_velocity *= (1.0-delta)
+			beingcontrolled = true
 		if (Input.is_action_pressed("ui_down")):
-			lvelocity.y = $"../../Globals".factor * 0.1
+			lvelocity.y = $"../../Globals".factor * 0.125
 			self.angular_velocity *= (1.0-delta)
+			beingcontrolled = true
 		if (Input.is_action_pressed("ui_left")):
-			lvelocity.x = $"../../Globals".factor * -0.1
+			lvelocity.x = $"../../Globals".factor * -0.125
 			self.angular_velocity *= (1.0-delta)
+			beingcontrolled = true
 		if (Input.is_action_pressed("ui_right")):
-			lvelocity.x = $"../../Globals".factor * 0.1
+			lvelocity.x = $"../../Globals".factor * 0.125
 			self.angular_velocity *= (1.0-delta)
+			beingcontrolled = true
+		$DotFlare.rotation_degrees = -$".".rotation_degrees
+		var licht = ($"../TopLayer/Timer".framesbetweenupdates * 4.4)
+		licht = pow(licht,4)
+		$DotFlare/Label.add_color_override("font_color", Color(licht,licht,licht,1))
+		$DotFlare.scale = Vector2(2.6,2.6)
+	else:
+		$DotFlare.rotation_degrees = -$".".rotation_degrees
+		$DotFlare/Label.add_color_override("font_color", Color(0,0,0,1))
+		$DotFlare.scale = Vector2(2.2,2.2)
 	
 	if $"../../Globals".pachinkomode:
 		lvelocity.y = $"../../Globals".factor * -0.1
@@ -28,8 +42,6 @@ func _physics_process(delta):
 	else:
 		self.apply_impulse(Vector2 (0,0), Vector2 (0,delta*200))
 		self.angular_velocity *= (1.0-delta)
-	
-	$DotFlare.rotation_degrees = -$".".rotation_degrees - ($"../TopLayer/Timer".framesbetweenupdates*14)
 	
 	if (self.position.y < -530):
 		var children = get_parent().get_children()

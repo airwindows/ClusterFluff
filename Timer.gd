@@ -5,7 +5,7 @@ export var countdown = 0.0
 export var framesbetweenupdates = 0.01
 
 func _ready():
-	countdown = 61
+	countdown = 121
 
 func _physics_process(delta):
 	if !(completedlevel && $"../../../Globals".pachinkomode):
