@@ -27,14 +27,11 @@ func _physics_process(delta):
 		var licht = ($"../TopLayer/Timer".framesbetweenupdates * 4.4)
 		licht = pow(licht,4)
 		$DotFlare/Label.add_color_override("font_color", Color(licht,licht,licht,1))
-		$DotFlare.scale = Vector2(2.6,2.6)
+		$DotFlare.scale = Vector2(2.5,2.5)
 	else:
 		$DotFlare.rotation_degrees = -$".".rotation_degrees
 		$DotFlare/Label.add_color_override("font_color", Color(0,0,0,1))
 		$DotFlare.scale = Vector2(2.2,2.2)
-	
-	if $"../../Globals".pachinkomode:
-		lvelocity.y = $"../../Globals".factor * -0.1
 	
 	if $"../TopLayer/Timer".countdown > 0:
 		self.apply_impulse(Vector2 (0,0), lvelocity)
@@ -50,10 +47,10 @@ func _physics_process(delta):
 			if i.is_in_group("Tanker"):
 				tankers += 1
 		if (tankers < 2):
-			$"../TopLayer/Timer".completedlevel = true #should be able to override running out of time and losing controls
+			$"../TopLayer/Timer".completedlevel = true
 		
 		$"../../Globals".score += int($"../TopLayer/Timer".countdown)
-		$"../../Globals".kabonus += $"../TopLayer/Timer".countdown * 0.001
+		$"../../Globals".kabonus += $"../TopLayer/Timer".countdown * 0.01
 		self.queue_free()
 	
 	if (Input.is_key_pressed(control_key)):
