@@ -1,13 +1,13 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Level17.jpg" type="Texture" id=1]
-[ext_resource path="res://LShadow17.jpg" type="Texture" id=2]
+[ext_resource path="res://Level28.jpg" type="Texture" id=1]
+[ext_resource path="res://LShadow28.jpg" type="Texture" id=2]
 
 [node name="root" type="Node2D" index="0"]
 
 _sections_unfolded = [ "Transform" ]
 
-[node name="Level17" type="TextureRect" parent="." index="0"]
+[node name="Level28" type="TextureRect" parent="." index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -35,7 +35,7 @@ transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
 [node name="Light2D" type="Light2D" parent="CanvasLayer" index="0"]
 
-position = Vector2( 967.195, 544.971 )
+position = Vector2( 960, 540 )
 enabled = true
 editor_only = false
 texture = ExtResource( 2 )
@@ -71,7 +71,7 @@ bounce = 0.0
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" index="0"]
 
 build_mode = 0
-polygon = PoolVector2Array( 117.809, 812.66, 89.8992, 783.021, 82.2425, 732.882, 103.978, 679.779, 142.508, 674.346, 183.756, 687.436, 206.479, 719.792, 210.925, 766.473, 191.659, 795.865, 156.34, 811.919 )
+polygon = PoolVector2Array( -10, 270, 421.136, 257.666, 433.137, 267.268, 433.737, 416.085, -72.7228, 432.287 )
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." index="3"]
 
@@ -86,7 +86,7 @@ bounce = 0.0
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2" index="0"]
 
 build_mode = 0
-polygon = PoolVector2Array( 505.984, 640.473, -53.61, 463.356, -0.353821, 374.192, 527.367, 549.696 )
+polygon = PoolVector2Array( 153.504, 934.547, 144.503, 925.546, 144.503, 554.102, 307.722, 545.101, 299.321, 922.545 )
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="." index="4"]
 
@@ -101,7 +101,7 @@ bounce = 0.0
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D3" index="0"]
 
 build_mode = 0
-polygon = PoolVector2Array( -22.6269, 111.377, 370.565, 42.0769, 386.293, 133.985, -65.3865, 210.658 )
+polygon = PoolVector2Array( 852.58, -20.0728, 844.205, 122.892, 832.242, 140.838, 196.376, 137.249, 177.832, -19.4746 )
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="." index="5"]
 
@@ -116,7 +116,7 @@ bounce = 0.0
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D4" index="0"]
 
 build_mode = 0
-polygon = PoolVector2Array( 792.263, -19.8508, 471.812, 321.735, 420.697, 342.377, 371.548, 290.771, 368.107, 270.62, 657.595, -21.8168 )
+polygon = PoolVector2Array( 478.119, 955.56, 409.328, 792.257, 524.777, 751.58, 572.033, 747.393, 616.298, 881.984, 603.138, 900.527 )
 
 [node name="StaticBody2D5" type="StaticBody2D" parent="." index="6"]
 
@@ -131,7 +131,7 @@ bounce = 0.0
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D5" index="0"]
 
 build_mode = 0
-polygon = PoolVector2Array( 916.282, 190.727, 878.81, 178.333, 854.885, 146.337, 854.309, 98.1996, 881.98, 64.4745, 914.264, 52.0799, 949.431, 58.9978, 976.526, 74.275, 991.515, 99.0644, 996.703, 129.33, 980.85, 168.244, 948.278, 185.827 )
+polygon = PoolVector2Array( 1007.51, 339.434, 1322.75, 486.586, 1161.84, 871.815, 1122.96, 889.162, 484.699, 602.035, 592.969, 342.425, 634.244, 263.465, 805.324, 351.397, 770.629, 447.106, 675.518, 402.841, 591.175, 564.948, 1086.47, 773.115, 1185.77, 539.226, 963.841, 428.563 )
 
 [node name="StaticBody2D6" type="StaticBody2D" parent="." index="7"]
 
@@ -146,7 +146,7 @@ bounce = 0.0
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D6" index="0"]
 
 build_mode = 0
-polygon = PoolVector2Array( 1150.68, 712.353, 341.903, 865.461, 320.03, 776.953, 997.573, 647.243, 1137.46, 637.579 )
+polygon = PoolVector2Array( 1669.69, 273.036, 1131.93, 272.438, 1154.06, 107.938, 1434.01, 123.491, 1666.7, 142.034 )
 
 [node name="StaticBody2D7" type="StaticBody2D" parent="." index="8"]
 
@@ -161,36 +161,6 @@ bounce = 0.0
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D7" index="0"]
 
 build_mode = 0
-polygon = PoolVector2Array( 1735.14, 649.278, 865.32, 507.869, 861.251, 416.309, 1748.87, 556.192 )
-
-[node name="StaticBody2D8" type="StaticBody2D" parent="." index="9"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D8" index="0"]
-
-build_mode = 0
-polygon = PoolVector2Array( 1934.74, 67.5229, 1155.97, 216.453, 1128.41, 119.353, 1987.88, -25.6406 )
-
-[node name="StaticBody2D9" type="StaticBody2D" parent="." index="10"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D9" index="0"]
-
-build_mode = 0
-polygon = PoolVector2Array( 1934.75, 827.243, 1479.2, 911.645, 1457.92, 809.93, 1976.59, 714.708 )
+polygon = PoolVector2Array( 1931.1, 650.488, 1442.98, 649.292, 1448.37, 475.221, 1943.66, 467.445 )
 
 

@@ -6,7 +6,7 @@ export var control_key = KEY_A
 func _physics_process(delta):
 	var lvelocity = Vector2(0,0)
 	var beingcontrolled = false
-	if control_key == $"..".controlled:
+	if (control_key == $"..".controlled && $"../TopLayer/Timer".countdown > 0):
 		if (Input.is_action_pressed("ui_up")):
 			lvelocity.y = $"../../Globals".factor * -0.12
 			self.angular_velocity *= (1.0-delta)
@@ -33,14 +33,18 @@ func _physics_process(delta):
 		$DotFlare/Label.add_color_override("font_color", Color(0,0,0,1))
 		$DotFlare.scale = Vector2(2.2,2.2)
 	
-	if $"../TopLayer/Timer".countdown > 0:
+	#if ($"../../Globals".pachinkomode && self.position.y > 400):
+	#	lvelocity.y = $"../../Globals".factor * -0.12
+	
+	if ($"../TopLayer/Timer".countdown > 0): # || $"../../Globals".pachinkomode
 		self.apply_impulse(Vector2 (0,0), lvelocity)
 		self.apply_impulse(Vector2 (0,0), -(linear_velocity - (linear_velocity.normalized() * $"../../Globals".factor)))
 	else:
-		self.apply_impulse(Vector2 (0,0), Vector2 (0,delta*200))
+		self.apply_impulse(Vector2 (0,0), Vector2 (0,delta*50))
 		self.angular_velocity *= (1.0-delta)
 	
-	if (self.position.y < -530):
+	if (self.position.y < -535 || self.position.y > 560 || self.position.x < -980 || self.position.x > 980):
+		#to avoid glitches, count any departure from the screen as a win
 		var children = get_parent().get_children()
 		var tankers = 0
 		for i in children:
@@ -48,9 +52,8 @@ func _physics_process(delta):
 				tankers += 1
 		if (tankers < 2):
 			$"../TopLayer/Timer".completedlevel = true
-		
 		$"../../Globals".score += int($"../TopLayer/Timer".countdown)
-		$"../../Globals".kabonus += $"../TopLayer/Timer".countdown * 0.01
+		$"../../Globals".kabonus += $"../TopLayer/Timer".countdown * 0.005
 		self.queue_free()
 	
 	if (Input.is_key_pressed(control_key)):

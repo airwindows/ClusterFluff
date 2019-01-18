@@ -1,13 +1,13 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Level17.jpg" type="Texture" id=1]
-[ext_resource path="res://LShadow17.jpg" type="Texture" id=2]
+[ext_resource path="res://Level30.jpg" type="Texture" id=1]
+[ext_resource path="res://LShadow30.jpg" type="Texture" id=2]
 
 [node name="root" type="Node2D" index="0"]
 
 _sections_unfolded = [ "Transform" ]
 
-[node name="Level17" type="TextureRect" parent="." index="0"]
+[node name="Level30" type="TextureRect" parent="." index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -35,7 +35,7 @@ transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
 [node name="Light2D" type="Light2D" parent="CanvasLayer" index="0"]
 
-position = Vector2( 967.195, 544.971 )
+position = Vector2( 960, 540 )
 enabled = true
 editor_only = false
 texture = ExtResource( 2 )
@@ -71,7 +71,7 @@ bounce = 0.0
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" index="0"]
 
 build_mode = 0
-polygon = PoolVector2Array( 117.809, 812.66, 89.8992, 783.021, 82.2425, 732.882, 103.978, 679.779, 142.508, 674.346, 183.756, 687.436, 206.479, 719.792, 210.925, 766.473, 191.659, 795.865, 156.34, 811.919 )
+polygon = PoolVector2Array( -10, 860, 72.1586, 733.112, 156.229, 617.316, 224.834, 563.384, 322.388, 501.124, 359.664, 504.297, 366.803, 522.935, 378.699, 568.936, 270.439, 621.678, 177.247, 706.542, 99.5212, 804.492, 47.9684, 896.098, 18.623, 978.979, -19.8433, 1088.03 )
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." index="3"]
 
@@ -86,7 +86,7 @@ bounce = 0.0
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2" index="0"]
 
 build_mode = 0
-polygon = PoolVector2Array( 505.984, 640.473, -53.61, 463.356, -0.353821, 374.192, 527.367, 549.696 )
+polygon = PoolVector2Array( -21.9752, 260.347, 47.9734, 230.025, 109.308, 219.688, 188.904, 228.647, 313.296, 253.456, 430.451, 295.149, 570.693, 379.57, 652.357, 451.931, 716.448, 527.737, 728.853, 554.614, 669.586, 593.896, 628.237, 536.352, 536.58, 452.965, 443.545, 388.529, 344.997, 344.768, 243.692, 319.614, 145.488, 318.236, 73.8165, 327.539, 14.2051, 353.383, -33.0016, 372.334 )
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="." index="4"]
 
@@ -101,7 +101,7 @@ bounce = 0.0
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D3" index="0"]
 
 build_mode = 0
-polygon = PoolVector2Array( -22.6269, 111.377, 370.565, 42.0769, 386.293, 133.985, -65.3865, 210.658 )
+polygon = PoolVector2Array( -24.6409, 114.454, 66.0674, 43.9507, 177.841, -22.6834, 427.181, -14.9453, 477.909, 25.4651, 555.721, 64.1559, 615.906, 109.725, 664.485, 150.995, 622.355, 198.714, 547.123, 127.351, 471.461, 69.7445, 368.715, 30.194, 286.175, 23.7455, 178.701, 48.6795, 100.029, 87.8002, 41.5633, 133.799, -13.4636, 192.265 )
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="." index="5"]
 
@@ -116,7 +116,7 @@ bounce = 0.0
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D4" index="0"]
 
 build_mode = 0
-polygon = PoolVector2Array( 792.263, -19.8508, 471.812, 321.735, 420.697, 342.377, 371.548, 290.771, 368.107, 270.62, 657.595, -21.8168 )
+polygon = PoolVector2Array( 579.363, 851.47, 696.668, 740.858, 848.143, 639.052, 995.392, 571.064, 1134.54, 529.144, 1263.12, 521.394, 1434.32, 536.19, 1631.94, 614.393, 1938.06, 772.209, 1942.29, 886.697, 1865.14, 783.482, 1761.93, 727.824, 1522.74, 627.075, 1318.42, 580.928, 1189.84, 585.859, 1069.02, 612.984, 969.676, 652.086, 854.484, 709.858, 740.349, 794.402, 641.714, 901.492 )
 
 [node name="StaticBody2D5" type="StaticBody2D" parent="." index="6"]
 
@@ -131,7 +131,7 @@ bounce = 0.0
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D5" index="0"]
 
 build_mode = 0
-polygon = PoolVector2Array( 916.282, 190.727, 878.81, 178.333, 854.885, 146.337, 854.309, 98.1996, 881.98, 64.4745, 914.264, 52.0799, 949.431, 58.9978, 976.526, 74.275, 991.515, 99.0644, 996.703, 129.33, 980.85, 168.244, 948.278, 185.827 )
+polygon = PoolVector2Array( 807.18, 302.498, 879.954, 201.567, 995.613, 110.599, 1081.82, 62.9493, 1187.08, 23.9631, 1417.1, -20.2212, 1666.18, -13.2903, 1775.77, 33.0599, 1869.34, 88.9401, 1978.5, 154.783, 1983.26, 225.392, 1812.59, 116.23, 1679.17, 63.8157, 1520.19, 39.1244, 1353.85, 43.4562, 1205.71, 85.9078, 1094.38, 140.922, 1011.64, 197.235, 915.475, 296, 883.853, 344.083 )
 
 [node name="StaticBody2D6" type="StaticBody2D" parent="." index="7"]
 
@@ -146,51 +146,6 @@ bounce = 0.0
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D6" index="0"]
 
 build_mode = 0
-polygon = PoolVector2Array( 1150.68, 712.353, 341.903, 865.461, 320.03, 776.953, 997.573, 647.243, 1137.46, 637.579 )
-
-[node name="StaticBody2D7" type="StaticBody2D" parent="." index="8"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D7" index="0"]
-
-build_mode = 0
-polygon = PoolVector2Array( 1735.14, 649.278, 865.32, 507.869, 861.251, 416.309, 1748.87, 556.192 )
-
-[node name="StaticBody2D8" type="StaticBody2D" parent="." index="9"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D8" index="0"]
-
-build_mode = 0
-polygon = PoolVector2Array( 1934.74, 67.5229, 1155.97, 216.453, 1128.41, 119.353, 1987.88, -25.6406 )
-
-[node name="StaticBody2D9" type="StaticBody2D" parent="." index="10"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D9" index="0"]
-
-build_mode = 0
-polygon = PoolVector2Array( 1934.75, 827.243, 1479.2, 911.645, 1457.92, 809.93, 1976.59, 714.708 )
+polygon = PoolVector2Array( 1928.68, 341.917, 1823.42, 312.461, 1706.89, 314.194, 1599.47, 357.078, 1539.69, 388.7, 1497.67, 338.452, 1563.51, 291.235, 1667.91, 254.415, 1758.44, 240.553, 1845.08, 247.051, 1965.94, 281.705 )
 
 

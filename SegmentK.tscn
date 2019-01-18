@@ -72,6 +72,126 @@ bounce = 0.0
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" index="0"]
 
 build_mode = 0
-polygon = PoolVector2Array(  )
+polygon = PoolVector2Array( -33.8531, 532.926, 24.6655, 531.233, 79.0215, 549.944, 130.95, 573.094, 172.711, 608.462, 198.504, 641.207, 222.974, 676.395, 247.266, 729.76, 261.092, 763.865, 251.378, 780.071, 238.494, 769.24, 219.582, 740.246, 183.385, 714.176, 141.192, 683.243, 91.2586, 660.088, 42.2672, 659.763, 10.3733, 671.146, -19.5167, 688.338 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." index="3"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 333.332, -45.6354, 302.083, 46.9827, 275.455, 108.585, 232.377, 166, 192.087, 211.195, 120.344, 264.921, 36.3687, 311.16, -70.6584, 343.363, -99.4226, 298.336, -147.949, 45.7228, -156.184, -57.1344, 90.861, -76.9923 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." index="4"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D3" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 499.145, 725.777, 461.554, 721.64, 392.425, 690.803, 330.772, 643.507, 272.326, 562.38, 233.525, 446.443, 238.567, 394.758, 273.551, 292.266, 315.24, 242.84, 389.715, 153.406, 459.157, 119.415, 546.524, 115.915, 633.967, 143.889, 699.33, 171.447, 761.897, 208.407, 828.273, 266.026, 879.586, 311.469, 863.649, 325.6, 814.73, 299.412, 749.863, 282.658, 673.193, 241.504, 609.716, 216.761, 521.399, 216.035, 435.976, 246.306, 375.048, 304.234, 347.008, 364.431, 339.193, 434.914, 340.24, 479.538, 358.232, 537.745, 382.313, 588.89, 415.308, 634.847, 434.656, 671.441, 464.296, 690.16 )
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="." index="5"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D4" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 871.9, 174.49, 841.204, 164.144, 814.02, 142.779, 806.674, 113.109, 800.551, 101.523, 817.94, 56.6542, 837.146, 30.8519, 872.503, 17.5935, 909.086, 23.2066, 930.167, 41.0471, 946.346, 64.7977, 949.973, 100.965, 943.563, 133.225, 922.985, 160.603, 896.272, 171.481 )
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="." index="6"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D5" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 1257.95, 498.871, 1317.91, 518.696, 1359.8, 574.27, 1390.33, 686.756, 1392.98, 778.13, 1358.63, 839.939, 1235.35, 911.647, 1149.47, 933.64, 1006.04, 929.146, 910.908, 880.358, 775.663, 759.048, 708.25, 659.964, 667.96, 515.428, 648.813, 355.711, 670.59, 352.027, 715.623, 455.401, 784.323, 586.555, 838.981, 666.305, 922.135, 768.376, 1035.46, 832.854, 1117.18, 843.549, 1223.61, 811.823, 1276.2, 785.069, 1323.22, 712.941, 1317.51, 600.999 )
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="." index="7"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D6" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 1122.91, 710.4, 1028.91, 628.325, 996.698, 570.912, 975.851, 459.008, 1000.4, 348.809, 1053.44, 263.352, 1141.02, 192.336, 1254.13, 169.672, 1350.37, 177.306, 1426.12, 221.299, 1489.79, 274.4, 1532.88, 324.524, 1574.88, 425.484, 1543.37, 408.011, 1437.88, 327.78, 1349.37, 264.452, 1255.55, 255.601, 1171.51, 286.063, 1122, 336.411, 1091.29, 396.397, 1072.14, 487.823, 1080.86, 588.258 )
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="." index="8"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D7" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 1926.55, 201.934, 1841.82, 200.928, 1656.56, 169.303, 1531.22, 139.348, 1404.03, 96.0841, 1307.07, 38.8282, 1194.27, -61.3559, 1991.75, -112.304, 1974.77, 121.935 )
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="." index="9"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D8" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 1940.56, 489.957, 1871.69, 539.747, 1800.36, 573.809, 1721.12, 589.735, 1578.3, 587.66, 1553.43, 561.698, 1651.45, 557.225, 1713.73, 535.288, 1802.52, 464.874, 1865.89, 394.522, 1893, 344.228, 1906.84, 309.7, 1985.47, 294.381 )
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="." index="10"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D9" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 1648.76, 866.51, 1620.91, 867.866, 1589.42, 853.246, 1575.17, 822.599, 1580.22, 778.498, 1598.18, 743.647, 1628.03, 720.37, 1675.22, 720.772, 1698.48, 744.178, 1713, 777.919, 1713.35, 815.561, 1702.57, 838.018, 1675.03, 856.649 )
 
 

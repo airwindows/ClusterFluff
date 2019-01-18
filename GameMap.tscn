@@ -7,13 +7,14 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 8.61934, 19.0542 )
+extents = Vector2( 8.66457, 19.0542 )
 
 [node name="Node2D" type="Node2D" index="0"]
 
 position = Vector2( 0, 1 )
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform", "Visibility" ]
+segments = [ "res://SegmentB.tscn", "res://SegmentW.tscn", "res://SegmentH.tscn", "res://SegmentS.tscn", "res://SegmentM.tscn", "res://SegmentR.tscn", "res://SegmentY.tscn", "res://SegmentN.tscn", "res://SegmentV.tscn", "res://SegmentAA.tscn", "res://SegmentG.tscn", "res://SegmentL.tscn", "res://SegmentO.tscn", "res://SegmentJ.tscn", "res://SegmentF.tscn", "res://SegmentZ.tscn", "res://SegmentP.tscn", "res://SegmentA.tscn", "res://SegmentI.tscn", "res://SegmentAE.tscn", "res://SegmentX.tscn", "res://SegmentAC.tscn", "res://SegmentQ.tscn", "res://SegmentAF.tscn", "res://SegmentAB.tscn", "res://SegmentE.tscn", "res://SegmentK.tscn", "res://SegmentT.tscn", "res://SegmentC.tscn", "res://SegmentD.tscn", "res://SegmentU.tscn", "res://SegmentAD.tscn", "res://SegmentAD.tscn" ]
 controlled = 65
 
 [node name="Camera2D" type="Camera2D" parent="." index="0"]
@@ -53,20 +54,20 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders" index="0"]
 
-position = Vector2( -2608.46, -8.16275 )
-scale = Vector2( 191.407, 160.475 )
+position = Vector2( -2612.18, -8.16275 )
+scale = Vector2( 191.088, 160.475 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Borders" index="1"]
 
-position = Vector2( 2748.27, -3.17386 )
-scale = Vector2( 207.047, 160.978 )
+position = Vector2( 2748.66, -3.17386 )
+scale = Vector2( 207.014, 160.978 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Borders" index="2"]
 
-position = Vector2( 4.71109, 2148.24 )
-scale = Vector2( 519.662, 84.4215 )
+position = Vector2( 4.71109, 2148.16 )
+scale = Vector2( 519.662, 84.425 )
 shape = SubResource( 1 )
 
 [node name="TopLayer" type="Node2D" parent="." index="2"]
@@ -81,9 +82,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = -940.0
-margin_top = -542.0
+margin_top = 490.0
 margin_right = 945.0
-margin_bottom = -489.0
+margin_bottom = 543.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2

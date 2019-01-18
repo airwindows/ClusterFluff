@@ -20,21 +20,21 @@ collision_layer = 1
 collision_mask = 1
 mode = 0
 mass = 1.0
-friction = 0.7
-bounce = 0.7
+friction = 0.0
+bounce = 0.5
 gravity_scale = 0.0
 custom_integrator = false
 continuous_cd = 1
 contacts_reported = 0
-contact_monitor = true
+contact_monitor = false
 sleeping = false
 can_sleep = false
 linear_velocity = Vector2( 0, 0 )
-linear_damp = 0.0
+linear_damp = -1.0
 angular_velocity = 0.0
-angular_damp = 0.4
+angular_damp = -1.0
 script = ExtResource( 1 )
-_sections_unfolded = [ "Angular", "Applied Forces", "Linear", "Transform" ]
+_sections_unfolded = [ "Angular", "Applied Forces", "Collision", "Linear", "Material", "Pause", "Pickable", "Transform", "Visibility", "Z Index" ]
 tanker_camera = NodePath("Camera2D")
 control_key = 65
 
@@ -50,6 +50,7 @@ _sections_unfolded = [ "Transform" ]
 position = Vector2( 0.0328919, 1.88246 )
 scale = Vector2( 2.44994, 2.49119 )
 shape = SubResource( 1 )
+_sections_unfolded = [ "Material", "Pause", "Transform", "Visibility", "Z Index" ]
 
 [node name="DotFlare" type="Sprite" parent="." index="2"]
 
@@ -91,7 +92,5 @@ _sections_unfolded = [ "Rect", "custom_colors", "custom_fonts" ]
 position = Vector2( 1, 1 )
 texture = ExtResource( 3 )
 _sections_unfolded = [ "Transform" ]
-
-[connection signal="body_entered" from="." to="." method="_on_Tanker_body_entered"]
 
 
