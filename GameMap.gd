@@ -34,7 +34,7 @@ export var segments = [
 	"res://SegmentU.tscn",
 	"res://SegmentAD.tscn",
 	"res://SegmentAD.tscn"]
-	#got an extra in case the math gives us higher numbers
+	#got an extra in case we can't numbers, so it won't die but rather just load a repeat
 export var controlled = KEY_A
 
 func _ready():
@@ -49,6 +49,20 @@ func _ready():
 	#if $"../Globals".pachinkomode:
 	#	$"../Globals".players = $"../Globals".level + 26
 	#pachinko mode testing means you always have every player
+	
+	#Plans: 26 at a time, go through all levels, repeat levels with 26 more
+	#Slowly increasing gravity adds difficulty and makes you work at getting all pieces up
+	#At some point gravity will be so intense it's no longer possible to complete all pieces
+	#and you lose the game
+	#As you get warps you also get to hit space while a piece is selected.
+	#If you do that, the gravity for that piece is reversed and it lights up and flips upside down
+	#so getting warps gives additional importance but lets you switch focus to 'which piece should be pulled upwards'
+	#given that speed is retained but you only get 'space = up' enabled when a warp kicks in
+	#that also means you want to use it before the next warp hits or it's wasted
+	
+	#tanker revisit: if 26 ships is so annoying and untrackable, consider the river version
+	#but with only two. They can stay visible to each other and it'll not be so disorienting.
+	#that's the one where if you gradually add more, one at a time, you ramp difficulty correctly.
 
 	var tankers = []
 	var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
