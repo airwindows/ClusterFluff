@@ -1,15 +1,13 @@
 extends Node2D
 onready var tankerTemplate = preload("res://Tanker.tscn")
 export var segments = [
-	"res://SegmentB.tscn", #replace with segment under test, set level % to 1
+	"res://SegmentB.tscn", #replace with segment under test, set level % to 1 and stop giving me this crap
 	"res://SegmentW.tscn",
 	"res://SegmentH.tscn",
-	"res://SegmentS.tscn",
 	"res://SegmentM.tscn",
 	"res://SegmentR.tscn",
 	"res://SegmentY.tscn",
 	"res://SegmentN.tscn",
-	"res://SegmentV.tscn",
 	"res://SegmentAA.tscn",
 	"res://SegmentG.tscn",
 	"res://SegmentL.tscn",
@@ -32,14 +30,16 @@ export var segments = [
 	"res://SegmentC.tscn",
 	"res://SegmentD.tscn",
 	"res://SegmentU.tscn",
-	"res://SegmentAD.tscn",
-	"res://SegmentAD.tscn"]
-	#got an extra in case we can't numbers, so it won't die but rather just load a repeat
+	"res://SegmentAD.tscn"] #was AD
+	#Source Code Bugfix: Script Variables 'Segments' is not updating for each change of the array. It lags. Godot Bug
 export var controlled = KEY_A
+
+
+
 
 func _ready():
 	
-	var t = load(segments[$"../Globals".level % 32]).instance()
+	var t = load(segments[$"../Globals".level % len(segments)]).instance()
 	#GameMap is our root so we don't have to go down two levels to get to globals, which are
 	#Project/ProjectSettings/Autoloaded at the same level as this very script. Everywhere else we gotta
 	#go down two levels like this: $"../../Globals".score

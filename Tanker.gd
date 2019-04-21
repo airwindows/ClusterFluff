@@ -2,6 +2,10 @@ extends RigidBody2D
 
 export(NodePath) var tanker_camera
 export var control_key = KEY_A
+export var thisGravity = 3
+
+func _ready():
+	self.apply_impulse(Vector2 (0,0), Vector2 (1,0))
 
 func _physics_process(delta):
 	var lvelocity = Vector2(0,0)
@@ -23,6 +27,11 @@ func _physics_process(delta):
 			lvelocity.x = $"../../Globals".factor * 0.12
 			self.angular_velocity *= (1.0-delta)
 			beingcontrolled = true
+		if (Input.is_action_pressed("ui_accept") && $"../../Globals".kabonus > 1.0 && thisGravity > 0):
+			$"../../Globals".kabonus -= 1.0
+			thisGravity = -20
+			
+	if ((control_key == $"..".controlled && $"../TopLayer/Timer".countdown > 0) || thisGravity < 0):
 		$DotFlare.rotation_degrees = -$".".rotation_degrees
 		var licht = ($"../TopLayer/Timer".framesbetweenupdates * 4.4)
 		licht = pow(licht,4)
@@ -33,15 +42,9 @@ func _physics_process(delta):
 		$DotFlare/Label.add_color_override("font_color", Color(0,0,0,1))
 		$DotFlare.scale = Vector2(2.2,2.2)
 	
-	#if ($"../../Globals".pachinkomode && self.position.y > 400):
-	#	lvelocity.y = $"../../Globals".factor * -0.12
-	
-	if ($"../TopLayer/Timer".countdown > 0): # || $"../../Globals".pachinkomode
-		self.apply_impulse(Vector2 (0,0), lvelocity)
-		self.apply_impulse(Vector2 (0,0), -(linear_velocity - (linear_velocity.normalized() * $"../../Globals".factor)))
-	else:
-		self.apply_impulse(Vector2 (0,0), Vector2 (0,delta*50))
-		self.angular_velocity *= (1.0-delta)
+	self.apply_impulse(Vector2 (0,0), Vector2 (0,delta*(thisGravity*(60-$"../TopLayer/Timer".countdown))))
+	self.apply_impulse(Vector2 (0,0), lvelocity)
+	self.apply_impulse(Vector2 (0,0), -(linear_velocity - (linear_velocity.normalized() * $"../../Globals".factor)))
 	
 	if (self.position.y < -535 || self.position.y > 560 || self.position.x < -980 || self.position.x > 980):
 		#to avoid glitches, count any departure from the screen as a win

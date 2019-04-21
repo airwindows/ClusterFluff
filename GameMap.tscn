@@ -14,7 +14,7 @@ extents = Vector2( 8.66457, 19.0542 )
 position = Vector2( 0, 1 )
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform", "Visibility" ]
-segments = [ "res://SegmentB.tscn", "res://SegmentW.tscn", "res://SegmentH.tscn", "res://SegmentS.tscn", "res://SegmentM.tscn", "res://SegmentR.tscn", "res://SegmentY.tscn", "res://SegmentN.tscn", "res://SegmentV.tscn", "res://SegmentAA.tscn", "res://SegmentG.tscn", "res://SegmentL.tscn", "res://SegmentO.tscn", "res://SegmentJ.tscn", "res://SegmentF.tscn", "res://SegmentZ.tscn", "res://SegmentP.tscn", "res://SegmentA.tscn", "res://SegmentI.tscn", "res://SegmentAE.tscn", "res://SegmentX.tscn", "res://SegmentAC.tscn", "res://SegmentQ.tscn", "res://SegmentAF.tscn", "res://SegmentAB.tscn", "res://SegmentE.tscn", "res://SegmentK.tscn", "res://SegmentT.tscn", "res://SegmentC.tscn", "res://SegmentD.tscn", "res://SegmentU.tscn", "res://SegmentAD.tscn", "res://SegmentAD.tscn" ]
+segments = [ "res://SegmentB.tscn", "res://SegmentW.tscn", "res://SegmentH.tscn", "res://SegmentM.tscn", "res://SegmentR.tscn", "res://SegmentY.tscn", "res://SegmentN.tscn", "res://SegmentAA.tscn", "res://SegmentG.tscn", "res://SegmentL.tscn", "res://SegmentO.tscn", "res://SegmentJ.tscn", "res://SegmentF.tscn", "res://SegmentZ.tscn", "res://SegmentP.tscn", "res://SegmentA.tscn", "res://SegmentI.tscn", "res://SegmentAE.tscn", "res://SegmentX.tscn", "res://SegmentAC.tscn", "res://SegmentQ.tscn", "res://SegmentAF.tscn", "res://SegmentAB.tscn", "res://SegmentE.tscn", "res://SegmentK.tscn", "res://SegmentT.tscn", "res://SegmentC.tscn", "res://SegmentD.tscn", "res://SegmentU.tscn", "res://SegmentAD.tscn" ]
 controlled = 65
 
 [node name="Camera2D" type="Camera2D" parent="." index="0"]

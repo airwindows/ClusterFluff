@@ -6,25 +6,18 @@ export var framesbetweenupdates = 0.01
 var insanitycheck = 0
 
 func _ready():
-	countdown = 61 + $"../../../Globals".timebonus
+	countdown = 61
 	$"../../../Globals".timebonus = 0
 
 func _physics_process(delta):
-	#if !(completedlevel): # && $"../../../Globals".pachinkomode
 	countdown -= delta
 	framesbetweenupdates -= delta
 	
 	if (completedlevel):
-		if (Input.is_action_pressed("ui_accept")): # || $"../../../Globals".pachinkomode
-			#if ($"../../../Globals".pachinkomode):
-			#	$"../../../Globals".segmentcounts[$"../../../Globals".level % 32] += (60.0 - countdown)
-			#	self.text = str($"../../../Globals".segmentcounts[$"../../../Globals".level % 32] / (floor(($"../../../Globals".level / 32) + 1))).pad_zeros(3) + "  " + $"../../".segments[$"../../../Globals".level % 32]
-			#	print(self.text) #this was for ranking levels by hardness
-			$"../../../Globals".level += 1
-			$"../../../Globals".players += 1
-			$"../../../Globals".kabonus = 0
-			$"../../../Globals".timebonus += (countdown * 0.5)
-			get_tree().change_scene("res://GameMap.tscn")
+		$"../../../Globals".level += 1
+		if ($"../../../Globals".level % len($"../../../Node2D".segments) == 0): $"../../../Globals".players += 26
+		$"../../../Globals".kabonus = 0
+		get_tree().change_scene("res://GameMap.tscn")
 	
 	if framesbetweenupdates < 0:
 		framesbetweenupdates = 0.25
