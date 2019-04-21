@@ -37,6 +37,7 @@ script = ExtResource( 1 )
 _sections_unfolded = [ "Angular", "Applied Forces", "Collision", "Linear", "Material", "Pause", "Pickable", "Transform", "Visibility", "Z Index" ]
 tanker_camera = NodePath("Camera2D")
 control_key = 65
+thisGravity = 3
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
@@ -59,7 +60,11 @@ scale = Vector2( 2.286, 2.14968 )
 texture = ExtResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Label" type="Label" parent="DotFlare" index="0"]
+[node name="Pivot" type="Node2D" parent="DotFlare" index="0"]
+
+_sections_unfolded = [ "Transform" ]
+
+[node name="Label" type="Label" parent="DotFlare/Pivot" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -85,7 +90,7 @@ valign = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = 1
-_sections_unfolded = [ "Rect", "custom_colors", "custom_fonts" ]
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
 
 [node name="DotFlare" type="Sprite" parent="DotFlare" index="1"]
 

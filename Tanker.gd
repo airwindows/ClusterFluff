@@ -2,7 +2,9 @@ extends RigidBody2D
 
 export(NodePath) var tanker_camera
 export var control_key = KEY_A
-export var thisGravity = 3
+var thisGravity = 3
+var gravityCheck = 0
+
 
 func _ready():
 	self.apply_impulse(Vector2 (0,0), Vector2 (1,0))
@@ -35,12 +37,18 @@ func _physics_process(delta):
 		$DotFlare.rotation_degrees = -$".".rotation_degrees
 		var licht = ($"../TopLayer/Timer".framesbetweenupdates * 4.4)
 		licht = pow(licht,4)
-		$DotFlare/Label.add_color_override("font_color", Color(licht,licht,licht,1))
+		$DotFlare/Pivot/Label.add_color_override("font_color", Color(licht,licht,licht,1))
 		$DotFlare.scale = Vector2(2.5,2.5)
 	else:
 		$DotFlare.rotation_degrees = -$".".rotation_degrees
-		$DotFlare/Label.add_color_override("font_color", Color(0,0,0,1))
+		$DotFlare/Pivot/Label.add_color_override("font_color", Color(0,0,0,1))
 		$DotFlare.scale = Vector2(2.2,2.2)
+	
+	if (thisGravity < 0 && gravityCheck < 180):
+		gravityCheck += (delta * 800)
+		$DotFlare/Pivot.rotation_degrees = min(gravityCheck,180)
+		
+	
 	
 	self.apply_impulse(Vector2 (0,0), Vector2 (0,delta*(thisGravity*(60-$"../TopLayer/Timer".countdown))))
 	self.apply_impulse(Vector2 (0,0), lvelocity)

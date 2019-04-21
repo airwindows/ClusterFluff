@@ -73,6 +73,6 @@ func _ready():
 		var tanker = tankerTemplate.instance()
 		add_child(tanker)
 		tanker.control_key = KEY_A + letter_index
-		tanker.get_node("DotFlare/Label").text = alphabet[letter_index]
+		tanker.get_node("DotFlare/Pivot/Label").text = alphabet[letter_index]
 		tanker.global_position = Vector2(-600 + letter_index * 50, 500 - rank_index * 55)
 	
