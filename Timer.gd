@@ -32,7 +32,8 @@ func _physics_process(delta):
 			if (tankers < 1):
 				completedlevel = true
 		if (countdown > 0): # || $"../../../Globals".pachinkomode
-			self.text = "Time:" + str(int(countdown)) + " warp " +str(int($"../../../Globals".kabonus)) + " Score:" + str(int($"../../../Globals".score))
+			self.text = str(int($"../../../Globals".score))
+			#self.text = "Time:" + str(int(countdown)) + " warp " +str(int($"../../../Globals".kabonus)) + " Score:" + str(int($"../../../Globals".score))
 			$"../../../Globals".factor = 300 + (sqrt(floor($"../../../Globals".kabonus)*0.2) * 200)
 			#we must update factor each time we change this, so the speed can return to normal on reset
 			#if ($"../../../Globals".pachinkomode):
@@ -46,5 +47,5 @@ func _physics_process(delta):
 				get_tree().change_scene("res://GameMap.tscn")
 				#out of time and we completed the level: thrown into next level
 			else:
-				self.text = "Time:0 warp " +str(int($"../../../Globals".kabonus)) + " Score:" + str(int($"../../../Globals".score))
+				self.text = str(int($"../../../Globals".score))
 				#out of time and uncomplete: we will rack up the final score as we're still ticking away the clock
