@@ -2,6 +2,7 @@ extends RigidBody2D
 
 export(NodePath) var tanker_camera
 export var control_key = KEY_A
+export var shiftitude = false
 var thisGravity = 3
 var gravityCheck = 0
 
@@ -12,7 +13,7 @@ func _ready():
 func _physics_process(delta):
 	var lvelocity = Vector2(0,0)
 	var beingcontrolled = false
-	if (control_key == $"..".controlled && $"../TopLayer/Timer".countdown > 0):
+	if (control_key == $"..".controlled && shiftitude == $"..".shiftituded && $"../TopLayer/Timer".countdown > 0):
 		if (Input.is_action_pressed("ui_up")):
 			lvelocity.y = $"../../Globals".factor * -0.12
 			self.angular_velocity *= (1.0-delta)
@@ -33,7 +34,7 @@ func _physics_process(delta):
 			$"../../Globals".kabonus -= 1.0
 			thisGravity = -20
 			
-	if ((control_key == $"..".controlled && $"../TopLayer/Timer".countdown > 0) || thisGravity < 0):
+	if ((control_key == $"..".controlled && shiftitude == $"..".shiftituded && $"../TopLayer/Timer".countdown > 0) || thisGravity < 0):
 		$DotFlare.rotation_degrees = -$".".rotation_degrees
 		var licht = ($"../TopLayer/Timer".framesbetweenupdates * 4.4)
 		licht = pow(licht,4)
@@ -68,5 +69,7 @@ func _physics_process(delta):
 		self.queue_free()
 	
 	if (Input.is_key_pressed(control_key)):
-		$"..".controlled = control_key
+		if (Input.is_key_pressed(KEY_SHIFT) == shiftitude):
+			$"..".controlled = control_key
+			$"..".shiftituded = shiftitude
 
