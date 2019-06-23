@@ -10,11 +10,10 @@
 custom_solver_bias = 0.0
 radius = 10.0
 
-[node name="Tanker" type="RigidBody2D" index="0" groups=[
+[node name="Tanker" type="RigidBody2D" groups=[
 "Tanker",
 ]]
 
-position = Vector2( 0, 300 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -37,7 +36,7 @@ script = ExtResource( 1 )
 _sections_unfolded = [ "Angular", "Applied Forces", "Collision", "Linear", "Material", "Pause", "Pickable", "Transform", "Visibility", "Z Index" ]
 tanker_camera = NodePath("Camera2D")
 control_key = 65
-thisGravity = 3
+shiftitude = false
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 

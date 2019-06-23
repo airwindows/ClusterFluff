@@ -1,5 +1,6 @@
 extends Node2D
 onready var tankerTemplate = preload("res://Tanker.tscn")
+onready var timingballTemplate = preload("res://TimingBall.tscn")
 export var segments = [
 	"res://SegmentB.tscn", #replace with segment under test, set level % to 1 and stop giving me this crap
 	"res://SegmentW.tscn",
@@ -76,6 +77,7 @@ func _ready():
 	#that's the one where if you gradually add more, one at a time, you ramp difficulty correctly.
 
 	var tankers = []
+	var timingballs = []
 	var alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 	
 	for i in range($"../Globals".players):
@@ -89,3 +91,8 @@ func _ready():
 		tanker.get_node("DotFlare/Pivot/Label").text = alphabet[display_index]
 		tanker.global_position = Vector2(-600 + letter_index * 50, 500 - rank_index * 55)
 	
+	for i in range (120):
+		var timingball = timingballTemplate.instance()
+		add_child(timingball)
+		timingball.global_position = Vector2( 0, 0 )
+		timingball.linear_velocity = Vector2( randf()-0.5, randf()-0.5 ).normalized() * 800
