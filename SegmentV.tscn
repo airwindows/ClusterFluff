@@ -116,7 +116,7 @@ bounce = 0.0
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D4" index="0"]
 
 build_mode = 0
-polygon = PoolVector2Array( 849.833, 297.119, 865.535, -29.0908, 1029.15, -32.13, 1020.03, 293.573 )
+polygon = PoolVector2Array( 849.833, 297.119, 865.535, -29.0908, 958.593, -751.737, 1029.15, -32.13, 1020.03, 293.573 )
 
 [node name="StaticBody2D5" type="StaticBody2D" parent="." index="6"]
 

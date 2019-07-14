@@ -3,7 +3,7 @@
 [ext_resource path="res://Level2.jpg" type="Texture" id=1]
 [ext_resource path="res://LShadow2.jpg" type="Texture" id=2]
 
-[node name="root" type="Node2D"]
+[node name="root" type="Node2D" index="0"]
 
 position = Vector2( 2, 2 )
 _sections_unfolded = [ "Transform" ]
@@ -74,7 +74,7 @@ bounce = 0.0
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" index="0"]
 
 build_mode = 0
-polygon = PoolVector2Array( 126.557, -16.6791, 659.265, 135.435, 367.354, 546.821, -24.3253, 1155.28, -125.94, -59.1726 )
+polygon = PoolVector2Array( 126.557, -16.6791, 659.265, 135.435, 367.354, 546.821, -24.3253, 1155.28, -69.1071, -356.365 )
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." index="3"]
 
@@ -90,7 +90,7 @@ bounce = 0.0
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2" index="0"]
 
 build_mode = 0
-polygon = PoolVector2Array( 1876.2, 1099.12, 1486.58, 614.546, 1345.14, 389.941, 1161.79, 152.895, 2149.26, -115.583, 2073.96, 1141.68 )
+polygon = PoolVector2Array( 1876.2, 1099.12, 1486.58, 614.546, 1345.14, 389.941, 1161.79, 152.895, 1711.57, 3.41791, 2048.14, -393.455, 2073.96, 1141.68 )
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="." index="4"]
 
