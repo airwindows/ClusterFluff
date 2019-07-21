@@ -37,9 +37,6 @@ export var segments = [
 export var controlled = KEY_A
 export var shiftituded = false
 
-
-
-
 func _ready():
 	
 	var t = load(segments[$"../Globals".level % len(segments)]).instance()
