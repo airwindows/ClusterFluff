@@ -6,7 +6,6 @@ export var shiftitude = false
 var thisGravity = 3
 var gravityCheck = 0
 
-
 func _ready():
 	self.apply_impulse(Vector2 (0,0), Vector2 (1,0))
 
@@ -50,18 +49,15 @@ func _physics_process(delta):
 		gravityCheck += (delta * 800)
 		$DotFlare/Pivot.rotation_degrees = min(gravityCheck,180)
 	
-	
 	self.apply_impulse(Vector2 (0,0), Vector2 (0,delta*(thisGravity*(180-remainingTimingBalls))))
 	self.apply_impulse(Vector2 (0,0), lvelocity)
-	self.apply_impulse(Vector2 (0,0), -(linear_velocity - (linear_velocity.normalized() * $"../../Globals".factor)))
+	if (remainingTimingBalls > 0):
+		self.apply_impulse(Vector2 (0,0), -(linear_velocity - (linear_velocity.normalized() * $"../../Globals".factor)))
 	
 	if (self.position.y < -535 || self.position.y > 560 || self.position.x < -980 || self.position.x > 980):
 		#to avoid glitches, count any departure from the screen as a win
 		$"../../Globals".score += int(remainingTimingBalls)
 		$"../../Globals".kabonus += remainingTimingBalls * 0.001
-		if (get_tree().get_nodes_in_group("Tanker").size() < 2):
-			$"../TopLayer/Timer".completedlevel = true
-			$"../../Globals".kabonus = 0.001
 		$"../../Globals".factor = 300 + (sqrt(floor($"../../Globals".kabonus)*0.2) * 200)
 		self.queue_free()
 	

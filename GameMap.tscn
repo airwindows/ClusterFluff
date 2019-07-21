@@ -109,8 +109,6 @@ lines_skipped = 0
 max_lines_visible = -1
 script = ExtResource( 3 )
 _sections_unfolded = [ "custom_colors", "custom_fonts" ]
-completedlevel = false
-countdown = 0.0
 framesbetweenupdates = 0.01
 
 

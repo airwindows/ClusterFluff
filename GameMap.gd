@@ -82,3 +82,5 @@ func _ready():
 		add_child(timingball)
 		timingball.global_position = Vector2( 0, 0 )
 		timingball.linear_velocity = Vector2( randf()-0.5, randf()-0.5 ).normalized() * 800
+		
+	
