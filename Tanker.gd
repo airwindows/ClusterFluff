@@ -36,7 +36,7 @@ func _physics_process(delta):
 			
 	if ((control_key == $"..".controlled && shiftitude == $"..".shiftituded && remainingTimingBalls > 0) || thisGravity < 0):
 		$DotFlare.rotation_degrees = -$".".rotation_degrees
-		var licht = ($"../TopLayer/Timer".framesbetweenupdates * 4.0)
+		var licht = ($"../TopLayer".framesbetweenupdates * 4.0)
 		licht = pow(licht,4)
 		$DotFlare/Pivot/Label.add_color_override("font_color", Color(licht,licht,licht,1))
 		$DotFlare.scale = Vector2(2.5,2.5)

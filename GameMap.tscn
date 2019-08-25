@@ -1,21 +1,12 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://GameMap.gd" type="Script" id=1]
-[ext_resource path="res://LiberationSans-Bold.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://Timer.gd" type="Script" id=3]
+[ext_resource path="res://Timer.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 8.66457, 19.0542 )
-
-[sub_resource type="DynamicFont" id=2]
-
-size = 200
-use_mipmaps = false
-use_filter = false
-font_data = ExtResource( 2 )
-_sections_unfolded = [ "Font", "Settings" ]
 
 [node name="Node2D" type="Node2D" index="0"]
 
@@ -69,7 +60,7 @@ shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Borders" index="1"]
 
-position = Vector2( 2748.66, -3.17386 )
+position = Vector2( 2748.66, -2.05106 )
 scale = Vector2( 207.014, 160.978 )
 shape = SubResource( 1 )
 
@@ -82,33 +73,8 @@ shape = SubResource( 1 )
 [node name="TopLayer" type="Node2D" parent="." index="2"]
 
 z_index = 2
+script = ExtResource( 2 )
 _sections_unfolded = [ "Pause", "Z Index" ]
-
-[node name="Timer" type="Label" parent="TopLayer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -947.0
-margin_top = -569.0
-margin_right = 938.0
-margin_bottom = -344.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = SubResource( 2 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "0"
-align = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-script = ExtResource( 3 )
-_sections_unfolded = [ "custom_colors", "custom_fonts" ]
 framesbetweenupdates = 0.01
 
 

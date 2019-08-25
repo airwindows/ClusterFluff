@@ -6,7 +6,7 @@
 [ext_resource path="res://DotFlare.svg" type="Texture" id=4]
 
 [node name="Node2D" type="Node2D" groups=[
-"WarpBall",
+"ScoreBall",
 ]]
 
 scale = Vector2( 5, 5 )
