@@ -5,7 +5,7 @@
 [ext_resource path="res://LiberationSansBold.tres" type="DynamicFont" id=3]
 [ext_resource path="res://DotFlare.svg" type="Texture" id=4]
 
-[node name="Node2D" type="Node2D" index="0" groups=[
+[node name="Node2D" type="Node2D" groups=[
 "ScoreBall",
 ]]
 

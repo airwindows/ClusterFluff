@@ -10,7 +10,7 @@
 custom_solver_bias = 0.0
 radius = 10.0
 
-[node name="Tanker" type="RigidBody2D" groups=[
+[node name="Tanker" type="RigidBody2D" index="0" groups=[
 "Tanker",
 ]]
 
@@ -93,8 +93,9 @@ _sections_unfolded = [ "custom_colors", "custom_fonts" ]
 
 [node name="DotFlare" type="Sprite" parent="DotFlare" index="1"]
 
+light_mask = 2
 position = Vector2( 1, 1 )
 texture = ExtResource( 3 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "Visibility" ]
 
 
