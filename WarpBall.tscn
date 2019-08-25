@@ -9,17 +9,20 @@
 "WarpBall",
 ]]
 
+light_mask = 2
 scale = Vector2( 5, 5 )
-z_index = 14
+z_index = 308
 z_as_relative = false
 script = ExtResource( 1 )
-_sections_unfolded = [ "Linear", "Transform", "Z Index" ]
+_sections_unfolded = [ "Linear", "Transform", "Visibility", "Z Index" ]
 enabled = false
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
+light_mask = 2
 scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 2 )
+_sections_unfolded = [ "Visibility" ]
 
 [node name="Label" type="Label" parent="Sprite" index="0"]
 
@@ -50,9 +53,11 @@ _sections_unfolded = [ "custom_colors", "custom_fonts" ]
 
 [node name="Sprite" type="Sprite" parent="Sprite" index="1"]
 
+light_mask = 2
 position = Vector2( -0.300686, -0.352533 )
 rotation = 2.79145
 scale = Vector2( 1.06623, 1.06277 )
 texture = ExtResource( 4 )
+_sections_unfolded = [ "Material", "Visibility" ]
 
 

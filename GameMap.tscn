@@ -17,7 +17,15 @@ segments = [ "res://SegmentB.tscn", "res://SegmentW.tscn", "res://SegmentH.tscn"
 controlled = 65
 shiftituded = false
 
-[node name="Camera2D" type="Camera2D" parent="." index="0"]
+[node name="TopLayer" type="Node2D" parent="." index="0"]
+
+z_index = 3316
+z_as_relative = false
+script = ExtResource( 2 )
+_sections_unfolded = [ "Pause", "Z Index" ]
+framesbetweenupdates = 0.01
+
+[node name="Camera2D" type="Camera2D" parent="." index="1"]
 
 anchor_mode = 1
 rotating = false
@@ -42,7 +50,7 @@ editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
 
-[node name="Borders" type="StaticBody2D" parent="." index="1"]
+[node name="Borders" type="StaticBody2D" parent="." index="2"]
 
 input_pickable = false
 collision_layer = 1
@@ -69,12 +77,5 @@ shape = SubResource( 1 )
 position = Vector2( 4.71109, 2148.16 )
 scale = Vector2( 519.662, 84.425 )
 shape = SubResource( 1 )
-
-[node name="TopLayer" type="Node2D" parent="." index="2"]
-
-z_index = 2
-script = ExtResource( 2 )
-_sections_unfolded = [ "Pause", "Z Index" ]
-framesbetweenupdates = 0.01
 
 

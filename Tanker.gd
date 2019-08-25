@@ -49,7 +49,7 @@ func _physics_process(delta):
 		gravityCheck += (delta * 800)
 		$DotFlare/Pivot.rotation_degrees = min(gravityCheck,180)
 	
-	self.apply_impulse(Vector2 (0,0), Vector2 (0,delta*(thisGravity*(180-remainingTimingBalls))))
+	self.apply_impulse(Vector2 (0,0), Vector2 (0,delta*(thisGravity*($"../../Globals".timingballs-remainingTimingBalls))))
 	self.apply_impulse(Vector2 (0,0), lvelocity)
 	if (remainingTimingBalls > 0):
 		self.apply_impulse(Vector2 (0,0), -(linear_velocity - (linear_velocity.normalized() * $"../../Globals".factor)))
