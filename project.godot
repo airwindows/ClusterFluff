@@ -10,7 +10,7 @@ config_version=3
 
 [application]
 
-config/name="ClusterFluff"
+config/name="LoonyPong"
 run/main_scene="res://GameMap.tscn"
 config/icon="res://icon.png"
 
