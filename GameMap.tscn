@@ -8,12 +8,12 @@
 custom_solver_bias = 0.0
 extents = Vector2( 8.66457, 19.0542 )
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" index="0"]
 
 position = Vector2( 0, 1 )
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform", "Visibility" ]
-segments = [ "res://SegmentB.tscn", "res://SegmentW.tscn", "res://SegmentH.tscn", "res://SegmentM.tscn", "res://SegmentR.tscn", "res://SegmentY.tscn", "res://SegmentN.tscn", "res://SegmentAA.tscn", "res://SegmentG.tscn", "res://SegmentL.tscn", "res://SegmentO.tscn", "res://SegmentJ.tscn", "res://SegmentF.tscn", "res://SegmentZ.tscn", "res://SegmentP.tscn", "res://SegmentA.tscn", "res://SegmentI.tscn", "res://SegmentAE.tscn", "res://SegmentX.tscn", "res://SegmentAC.tscn", "res://SegmentQ.tscn", "res://SegmentAF.tscn", "res://SegmentAB.tscn", "res://SegmentE.tscn", "res://SegmentK.tscn", "res://SegmentT.tscn", "res://SegmentC.tscn", "res://SegmentD.tscn", "res://SegmentU.tscn", "res://SegmentAD.tscn" ]
+segments = [ "res://SegmentW.tscn", "res://SegmentY.tscn", "res://SegmentH.tscn", "res://SegmentO.tscn", "res://SegmentM.tscn", "res://SegmentL.tscn", "res://SegmentAA.tscn", "res://SegmentE.tscn", "res://SegmentG.tscn", "res://SegmentK.tscn", "res://SegmentC.tscn", "res://SegmentN.tscn", "res://SegmentAC.tscn", "res://SegmentF.tscn", "res://SegmentAF.tscn", "res://SegmentU.tscn", "res://SegmentA.tscn", "res://SegmentAB.tscn", "res://SegmentP.tscn", "res://SegmentD.tscn" ]
 controlled = 65
 shiftituded = false
 
