@@ -17,3 +17,5 @@ func _process(delta):
 	dropvelocity *= 0.95
 	if (abs(dropvelocity) > 60 || vposition < vmax - 1):
 		global_position.y = vposition
+		
+

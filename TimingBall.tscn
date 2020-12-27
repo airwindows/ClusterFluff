@@ -1,50 +1,30 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://TimingBall.gd" type="Script" id=1]
 [ext_resource path="res://Dot.svg" type="Texture" id=2]
 
-[sub_resource type="CircleShape2D" id=1]
-
-custom_solver_bias = 0.0
-radius = 10.0
-
-[node name="RigidBody2D" type="RigidBody2D" index="0" groups=[
-"TimingBall",
-]]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-mode = 0
-mass = 1.02041e-05
+[sub_resource type="PhysicsMaterial" id=1]
 friction = 0.0
 bounce = 0.5
-gravity_scale = 1.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
+
+[sub_resource type="CircleShape2D" id=2]
+
+[node name="RigidBody2D" type="RigidBody2D" groups=[
+"TimingBall",
+]]
+mass = 1.02041e-05
+physics_material_override = SubResource( 1 )
 can_sleep = false
-linear_velocity = Vector2( 0, 0 )
 linear_damp = 0.05
-angular_velocity = 0.0
-angular_damp = -1.0
 script = ExtResource( 1 )
-_sections_unfolded = [ "Linear", "Transform" ]
 
-[node name="Sprite" type="Sprite" parent="." index="0"]
-
+[node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.941176 )
 light_mask = 2
 position = Vector2( 0, -0.2 )
-scale = Vector2( 0.79, 0.79 )
+scale = Vector2( 0.9, 0.9 )
 texture = ExtResource( 2 )
-_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
-
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0.302322, -0.292804 )
-shape = SubResource( 1 )
-_sections_unfolded = [ "Material", "Pause", "Transform", "Visibility", "Z Index" ]
-
-
+shape = SubResource( 2 )

@@ -8,56 +8,35 @@
 [node name="Node2D" type="Node2D" groups=[
 "WarpBall",
 ]]
-
 light_mask = 2
 scale = Vector2( 5, 5 )
 z_index = 308
 z_as_relative = false
 script = ExtResource( 1 )
-_sections_unfolded = [ "Linear", "Transform", "Visibility", "Z Index" ]
-enabled = false
 
-[node name="Sprite" type="Sprite" parent="." index="0"]
-
+[node name="Sprite" type="Sprite" parent="."]
 light_mask = 2
 scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 2 )
-_sections_unfolded = [ "Visibility" ]
 
-[node name="Label" type="Label" parent="Sprite" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Label" type="Label" parent="Sprite"]
 margin_left = -13.0
 margin_top = -17.0
 margin_right = 25.0
 margin_bottom = 30.0
 rect_scale = Vector2( 0.7, 0.7 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "+"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Sprite" type="Sprite" parent="Sprite" index="1"]
-
+[node name="Sprite" type="Sprite" parent="Sprite"]
 light_mask = 2
 position = Vector2( -0.300686, -0.352533 )
 rotation = 2.79145
 scale = Vector2( 1.06623, 1.06277 )
 texture = ExtResource( 4 )
-_sections_unfolded = [ "Material", "Visibility" ]
-
-

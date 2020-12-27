@@ -155,7 +155,7 @@
 			var statusNotice = document.getElementById('status-notice');
 
 			var initializing = true;
-			var statusMode = 'progress';
+			var statusMode = 'hidden';
 			var lastWidth = 0;
 			var lastHeight = 0;
 			var lastScale = 0;
@@ -250,7 +250,7 @@
 						}, 500);
 					}
 				} else {
-					setStatusMode('progress');
+					setStatusMode('indeterminate');
 				}
 			});
 
@@ -265,7 +265,7 @@
 			if (!Engine.isWebGLAvailable()) {
 				displayFailureNotice('WebGL not available');
 			} else {
-				setStatusMode('progress');
+				setStatusMode('indeterminate');
 				engine.setCanvas(canvas);
 				engine.startGame(EXECUTABLE_NAME, MAIN_PACK).then(() => {
 					setStatusMode('hidden');

@@ -44,7 +44,7 @@ func _ready():
 		tanker.get_node("DotFlare/Pivot/Label").text = alphabet[display_index]
 		tanker.global_position = Vector2(-600 + letter_index * 50, 500 - rank_index * 55)
 	
-	for i in range (10):
+	for i in range (sqrt($"../Globals".players)):
 		var timingball = timingballTemplate.instance()
 		add_child(timingball)
 		timingball.global_position = Vector2( 0, 0 )
