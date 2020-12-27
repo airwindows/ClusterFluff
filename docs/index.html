@@ -155,7 +155,7 @@
 			var statusNotice = document.getElementById('status-notice');
 
 			var initializing = true;
-			var statusMode = 'hidden';
+			var statusMode = 'progress';
 			var lastWidth = 0;
 			var lastHeight = 0;
 			var lastScale = 0;
@@ -250,7 +250,7 @@
 						}, 500);
 					}
 				} else {
-					setStatusMode('indeterminate');
+					setStatusMode('progress');
 				}
 			});
 
