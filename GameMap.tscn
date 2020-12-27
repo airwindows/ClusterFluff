@@ -4,78 +4,33 @@
 [ext_resource path="res://Timer.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-
-custom_solver_bias = 0.0
 extents = Vector2( 8.66457, 19.0542 )
 
-[node name="Node2D" type="Node2D" index="0"]
-
+[node name="Node2D" type="Node2D"]
 position = Vector2( 0, 1 )
 script = ExtResource( 1 )
-_sections_unfolded = [ "Transform", "Visibility" ]
-segments = [ "res://SegmentW.tscn", "res://SegmentY.tscn", "res://SegmentH.tscn", "res://SegmentO.tscn", "res://SegmentM.tscn", "res://SegmentL.tscn", "res://SegmentAA.tscn", "res://SegmentE.tscn", "res://SegmentG.tscn", "res://SegmentK.tscn", "res://SegmentC.tscn", "res://SegmentN.tscn", "res://SegmentAC.tscn", "res://SegmentF.tscn", "res://SegmentAF.tscn", "res://SegmentU.tscn", "res://SegmentA.tscn", "res://SegmentAB.tscn", "res://SegmentP.tscn", "res://SegmentD.tscn" ]
-controlled = 65
-shiftituded = false
 
-[node name="TopLayer" type="Node2D" parent="." index="0"]
-
+[node name="TopLayer" type="Node2D" parent="."]
 z_index = 3316
 z_as_relative = false
 script = ExtResource( 2 )
-_sections_unfolded = [ "Pause", "Z Index" ]
-framesbetweenupdates = 0.01
 
-[node name="Camera2D" type="Camera2D" parent="." index="1"]
-
-anchor_mode = 1
-rotating = false
+[node name="Camera2D" type="Camera2D" parent="."]
 current = true
-zoom = Vector2( 1, 1 )
-limit_left = -10000000
-limit_top = -10000000
-limit_right = 10000000
-limit_bottom = 10000000
-limit_smoothed = false
-drag_margin_h_enabled = false
-drag_margin_v_enabled = false
-smoothing_enabled = false
-smoothing_speed = 5.0
-offset_v = 0.0
-offset_h = 0.0
-drag_margin_left = 0.2
-drag_margin_top = 0.2
-drag_margin_right = 0.2
-drag_margin_bottom = 0.2
-editor_draw_screen = true
-editor_draw_limits = false
-editor_draw_drag_margin = false
 
-[node name="Borders" type="StaticBody2D" parent="." index="2"]
+[node name="Borders" type="StaticBody2D" parent="."]
 
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders" index="0"]
-
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders"]
 position = Vector2( -2612.18, -8.16275 )
 scale = Vector2( 191.088, 160.475 )
 shape = SubResource( 1 )
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Borders" index="1"]
-
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Borders"]
 position = Vector2( 2748.66, -2.05106 )
 scale = Vector2( 207.014, 160.978 )
 shape = SubResource( 1 )
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Borders" index="2"]
-
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Borders"]
 position = Vector2( 4.71109, 2148.16 )
 scale = Vector2( 519.662, 84.425 )
 shape = SubResource( 1 )
-
-
